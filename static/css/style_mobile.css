@@ -59,6 +59,11 @@
     }
 
 
+    .social ul li{
+        margin-left: -10px;
+        /* margin: 15px 5px 5px 0; */
+    }
+
     #intro{
         margin: 0 auto;
         position: sticky;
@@ -148,8 +153,6 @@
         font-size: 3vh;
     }
 
-    
-
       /* FOR EDUCATION */
     /* section#education{
     } */
@@ -207,19 +210,83 @@
 }
 
 @media screen and (max-width: 640px) {
-    .project-container { grid-template-columns: repeat(1, 1fr); }
-    .blur-container{
-        margin-bottom: -40vh;
+    .project-container { 
+        margin: 10px 02px 10px 47px;
+        grid-template-columns: repeat(1, 1fr); }
+
+    .video {
+        top: 30vh;
     }
+
+    .proj-content > h1 {
+        top: 3vh;
+    }
+
+    .proj-content > hr {    
+        width: 55vw;
+        top: 6vh;
+        left: 6vw;
+    }
+
+    .proj-content > h3 {
+        top: 8vh;
+        font-size: 5vw;
+        margin-left: -58vw;
+    }
+
+    .proj-content > .tools {
+        top: 4.5vh;
+        margin-left: 29vw;
+        grid-gap: 3px;
+    }
+
+    .button-container-project {
+        top: 28vh;
+        width: 100%;
+    }
+    .button-container-project button{
+        width: 30vw;
+        margin: 0;
+    }
+    
 }
 
 
 @media (min-width: 640px) and (max-width: 1200px) {
     .project-container { grid-template-columns: repeat(2, 1fr); }
-    .blur-container{
-        margin-bottom: -40vh;
+    .video{
+        margin-top: 30vh;
+    }
+    .proj-content > h1 {
+        top: 6vh;
+    }
+    .proj-content > hr{
+        top: 10vh;
+        left: 10vw;
+    } 
+
+    .proj-content > h3 {
+        top: 20vh;
+        margin-left: -27vw;
     }
 
+    .proj-content > .tools {
+        top: 18vh;
+        margin-left: 15vw;
+    }
+
+    .button-container-project {
+        top: 31vh;
+    }
+
+    .button-container-project button{
+        width: 15vw;
+        margin: 0;
+    }
+
+    /* .button-container-project .button2 {
+        margin: 1.5vw 0px 0px 65px;
+    } */
 }
 
 @media (max-width: 650px){
