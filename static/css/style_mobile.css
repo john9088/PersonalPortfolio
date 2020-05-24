@@ -71,7 +71,6 @@
         height: fit-content;
         display: flex;
         flex-direction: column;
-        /* border-radius: 25px; */
         background: rgb(68, 67, 67);
         opacity: 1;
         transition: 2s all ease-in-out;
@@ -153,9 +152,6 @@
         font-size: 3vh;
     }
 
-      /* FOR EDUCATION */
-    /* section#education{
-    } */
 
 }   
 
@@ -266,13 +262,13 @@
     } 
 
     .proj-content > h3 {
-        top: 20vh;
+        top: 14vh;
         margin-left: -27vw;
     }
 
     .proj-content > .tools {
-        top: 18vh;
-        margin-left: 15vw;
+        margin-top: -15vh;
+        margin-left: 16vw;
     }
 
     .button-container-project {
