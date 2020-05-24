@@ -17,9 +17,6 @@
         justify-content: center;
         /* background: url('../photo/land_page_img.jpg') no-repeat center center/cover; */
     }
-    .navbar{
-        z-index: 1;
-    }
     .nav-links{
         position: absolute;
         right: 0px;
@@ -152,7 +149,37 @@
         font-size: 3vh;
     }
 
+    #skills{
+        flex-direction: column;
+    }
 
+    .skill-content{
+        flex-direction: column;
+    }
+
+    .skill-content > section{
+        width:100%;
+    }
+
+    .skill-card{
+        width:100%;
+    }
+
+    #aboutme{
+        flex-direction: column;
+    }
+
+    .aboutme-content{
+        flex-direction: column;
+    }
+
+    .aboutme-content > section{
+        width:100%;
+    }
+
+    .aboutme-card{
+        width:100%;
+    }
 }   
 
 #nav:checked + .nav-btn {
@@ -244,6 +271,22 @@
         width: 30vw;
         margin: 0;
     }
+
+    .skill-content > section > h1 {
+        margin: 6vh 0 1vh 0.5vw;
+        font-size: 7vw;
+    }
+
+    .skill-card ul li p {
+        margin-left: 38px;
+        top: -40px;
+        font-size: 2vh;
+    }
+
+    .aboutme-content > section > h1 {
+        margin: 6vh 0 1vh 0.5vw;
+        font-size: 7vw;
+    }
     
 }
 
@@ -280,6 +323,20 @@
         margin: 0;
     }
 
+    .skill-content > section > h1 {
+        margin: 6vh 0 2vh 6vw;
+        font-size: 8vw;
+    }
+
+    .skill-card ul li p {
+        margin-left: 60px;
+        font-size: 3vw;
+    }
+
+    .aboutme-content > section > h1 {
+        margin: 6vh 0 2vh 6vw;
+        font-size: 8vw;
+    }
     /* .button-container-project .button2 {
         margin: 1.5vw 0px 0px 65px;
     } */

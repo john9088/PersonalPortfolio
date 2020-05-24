@@ -6,9 +6,10 @@
 
 body {
     font-family:'DM Sans', sans-serif ;
-    background-image: url("https://images.unsplash.com/photo-1472289065668-ce650ac443d2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
+    /* background-image: url("https://images.unsplash.com/photo-1472289065668-ce650ac443d2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"); */
     background-position: center;
     background-size: cover;
+    background: linear-gradient(90deg,  coral 0%,coral 50%,lightblue 50%,lightblue 100%);
     width: 100%;
     color: #000;
     height: 100vh;
@@ -159,7 +160,7 @@ body {
 
 /* For socail media icon end */
 
-
+/* FOR HOME SECTION */
 .land_img{
     width:20vw;
     height: auto;
@@ -278,6 +279,7 @@ body {
     color: white;
   }
 
+/* FOR PROJECT SECTION */
 
 #projects {
     position: relative;
@@ -286,6 +288,7 @@ body {
     top:8vh;
     width: 100%;
     height: auto;
+    /* padding-bottom: 4vh; */
     overflow-x: hidden;
     overflow-y: visible;
     scroll-snap-align: center;
@@ -308,12 +311,14 @@ body {
     grid-gap: 1rem;
     grid-template-columns: auto auto auto;
     height: auto;
-    border: 2px solid #c5c5c5;
+    
+    /* border: 2px solid #c5c5c5; */
     overflow-y: visible;
 }
 
 .project-container .proj{
     height: 70vh;
+    box-shadow: 10px 50px 10px;
 }
 .video {
     position: relative;
@@ -393,75 +398,6 @@ body {
     justify-content: space-evenly;
 }
 
-/* .carosel{
-    top:20px;
-	height: 80%;
-	position: relative;
-	overflow: hidden;
-}
-
-.slider{
-	height: 100%;
-    display: flex;
-	width: 400%;
-    transition: all 1s;
-    justify-content: center;
-	align-items: center;
-}
-
-.slider section{
-    flex-basis: 100%;
-    height: 100%;
-    display: flex;
-    top: 0;
-    position: relative;
-    border-radius: 25px;
-    margin-left: 20px;
-    margin-right: 20px;
-    opacity:0.7;
-    background: white;
-	justify-content: center;
-	align-items: center;
-}
-
-.controls .arrow{
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	cursor: pointer;
-}
-
-.arrow.left{
-	left:10px;
-}
-
-
-.arrow.right{
-	right:10px;
-}
-
-.controls ul{
-	position: absolute;
-	display: flex;
-	bottom: 20px;
-	left: 50%;
-	transform: translate(-50%);
-	list-style: none;
-}
-
-.controls ul li{
-	width: 10px;
-	height: 10px;
-	border: 2px solid #333;
-	border-radius: 50px;
-	margin: 10px;
-	background:#333;
-	cursor: pointer;
-}
-
-.controls ul li.selected{
-	background: transparent;
-} */
 
 
 .proj-title{
@@ -473,153 +409,143 @@ body {
 }
 
 
+/* SECTION ABOUT ME START */
 
-
-section#about {
+#aboutme{
+    position: relative;
     display: flex;
-    flex-direction: column;
     width: 100%;
-    top:8vh;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+
+.aboutme-content{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+.aboutme-content > section{
+    position: relative;
+    background-color: coral;
+    width:50%;
+    height: auto;
+    text-align: left;
+}
+
+.aboutme-content > section > h1 {
+    position: relative;
+    margin: 30vh 3.5vw;
+    font-size: 6vw;
+}
+
+.aboutme-card{
+    position: relative;
+    width:50%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    border-left: 2px solid #000;
+    background-color: lightblue;
+}
+
+
+
+/* FOR SKILL SECTION */
+
+#skills{
+    position: relative;
+    display: flex;
+    width: 100%;
     height: auto;
     overflow-x: hidden;
     overflow-y: visible;
-    scroll-snap-align: center;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
-
-
-.timeline{
-	position: relative;
-	width: 100%;
-	height: 100%;
-	align-content: center;
-	justify-content: center;
-}
-
-.timeline:before{
-	content: '';
-	position: absolute;
-	left: 50%;
-	width: 2px;
-	height:100%;
-	background: #c5c5c5;
-}
-
-
-
-.timeline ul{
-	display: flex;
-  	flex-direction: column;
-  	justify-content: space-around;
-    height: 100vh;
-    width: 100%;
-	margin: 0;
-	padding: 0;
-
-}
-.timeline ul li{
-	list-style: none;
-	position: relative;
-	width: 50%;
-	padding: 20px 40px;
-}
-
-.timeline ul li:nth-child(odd){
-	float: left;
-	text-align: right;
-	clear: both;
-}
-
-.timeline ul li:nth-child(even){
-	margin-left: 50%;
-	float: right;
-	text-align: left;
-	clear: both;
-}
-
-.content{
-	padding-bottom: 20px;
-}
-
-
-.timeline ul li:nth-child(odd):before{
-	content: '';
-	position: absolute;
-	top: 24px;
-	right: -6px;
-	width: 10px;
-	height: 10px;
-	background: rgba(233,33,99,1);
-	border-radius: 50%;
-	box-shadow: 0 0 0 3px rgba(233,33,99,0.3);
-
-}
-
-.timeline ul li:nth-child(even):before{
-	content: '';
-	position: absolute;
-	top: 24px;
-	left: -4px;
-	width: 10px;
-	height: 10px;
-	background: rgba(233,33,99,1);
-	border-radius: 50%;
-	box-shadow: 0 0 0 3px rgba(233,33,99,0.3);
-
-}
-
-.timeline ul li h3{
-	font-weight: 600;
-	color: rgba(233,33,99,1);
-}
-
-.timeline ul li p{
-	margin: 10px 0 0;
-	padding: 0;
-}
-
-.timeline ul li .time h4{
-	margin: 0;
-	padding:0;
-	font-size: 14px;
-}
-
-.timeline ul li:nth-child(odd) .time{
-	position: absolute;
-	top: 12px;
-	right: -165px;
-	margin: 0;
-	padding: 8px 16px;
-	background: rgba(233,33,99,1);
-	color:#fff;
-	border-radius: 18px;
-	box-shadow: 0 0 0 3px rgba(233,33,99,0.3);
-}
-
-.timeline ul li:nth-child(even) .time{
-	position: absolute;
-	top: 14px;
-	left: -140px;
-	margin: 0;
-	padding: 8px 16px;
-	background: rgba(233,33,99,1);
-	color:#fff;
-	border-radius: 18px;
-	box-shadow: 0 0 0 3px rgba(233,33,99,0.3);
-}
-
-#skills{
+.skill-content{
+    position: relative;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     width: 100%;
-    height: 100vh;
-    top:8vh;
-    overflow-x: hidden;
+    height: auto;
     overflow-y: hidden;
-    scroll-snap-align: center;
 }
 
+.skill-content > section{
+    position: relative;
+    background-color: coral;
+    width:50%;
+    height: auto;
+    text-align: left;
+}
+
+.skill-content > section > h1 {
+    position: relative;
+    margin: 30vh 3.5vw;
+    font-size: 6vw;
+}
+
+.skill-card{
+    position: relative;
+    width:50%;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    border-left: 2px solid #000;
+    background-color: lightblue;
+}
+
+.skill-card  section{
+    position: relative;
+    /* border: 2px solid #000; */
+}
+
+.skill-card  section > div{
+    position: relative;
+    background-color: aliceblue;
+    width: 70%;
+    height: auto;
+    margin: 10% 25%;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px; 
+}
+
+.skill-card  section > div > ul{
+    position: relative;
+    top: 2vh;
+    left: 1vw;
+    
+}
+
+.skill-card  ul li{
+    list-style: none;
+    font-size: 1.5vw;
+    padding-top: 1px;
+}
+
+.skill-card  ul li p{
+    position: relative;
+    margin-left: 40px;
+    top: -50px;
+}
+
+.skill-card  ul li img{
+    position: relative;
+    height: 40px;
+    width: 40px;
+    padding-right: 5px;
+    margin-bottom: 10px;
+}
+
+
+
+/* FOR CONTACT ME SECTION */
 #contact_me{
     display: flex;
     flex-direction: column;
