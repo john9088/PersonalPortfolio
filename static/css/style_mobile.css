@@ -4,7 +4,7 @@
     }
 }
 
-@media screen and (max-width:1200px){
+@media screen and (orientation: portrait){
     body{
         overflow-x: hidden;
     }
@@ -128,25 +128,60 @@
         transition-duration: 0.4s;
         cursor: pointer;
       }
-    
-      .button1 {
-        margin-top: 1vh;
-      }
-
     .button2 {
-        margin: 2vw 0 0 0;
-      }
+        margin-top: 10px;
+        margin-left: 0vw;
+    }
 
-
-    section#project{
+    #projects{
         overflow-y: visible;
+        flex-direction: column;
     }
 
-    .project-container .proj{
-        height: 40vh;
+    .project-content{
+        grid-template-columns: auto;
+        grid-template-rows: auto;
     }
-    .proj-title{
+
+    .project-container {
+        flex-direction: column;
+    }
+
+    .project-container section{
+        width: 100%;
+    }
+
+    .project-container .project-head{
+        width: 100%;
+        background-color: coral;
+    }
+    .project-container .project-head > h1 {
+        margin: 7vh 0 1.5vh 5vw;
+        font-size: 13vw;
+    }
+
+    .project-content{
+        background-color: lightblue;
+    }
+
+    .label-up {
         font-size: 3vh;
+    }
+
+    .button-container-project .button2 {
+        margin-top: 0px;
+        margin-left: 10px;
+    }
+
+    .project-content::-webkit-scrollbar{
+        width: 12px;
+        background-color: #F5F5F5;
+    }
+
+    .project-content::-webkit-scrollbar-thumb{
+        border-radius: 10px;
+        /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3); */
+        background-color: #555;
     }
 
     #skills{
@@ -163,6 +198,7 @@
 
     .skill-card{
         width:100%;
+        background-color: lightblue;
     }
 
     #aboutme{
@@ -233,44 +269,6 @@
 }
 
 @media screen and (max-width: 640px) {
-    .project-container { 
-        margin: 10px 02px 10px 47px;
-        grid-template-columns: repeat(1, 1fr); }
-
-    .video {
-        top: 30vh;
-    }
-
-    .proj-content > h1 {
-        top: 3vh;
-    }
-
-    .proj-content > hr {    
-        width: 55vw;
-        top: 6vh;
-        left: 6vw;
-    }
-
-    .proj-content > h3 {
-        top: 8vh;
-        font-size: 5vw;
-        margin-left: -58vw;
-    }
-
-    .proj-content > .tools {
-        top: 4.5vh;
-        margin-left: 29vw;
-        grid-gap: 3px;
-    }
-
-    .button-container-project {
-        top: 28vh;
-        width: 100%;
-    }
-    .button-container-project button{
-        width: 30vw;
-        margin: 0;
-    }
 
     .skill-content > section > h1 {
         margin: 6vh 0 1vh 0.5vw;
@@ -294,13 +292,13 @@
 @media (min-width: 640px) and (max-width: 1200px) {
     
     .skill-content > section > h1 {
-        margin: 6vh 0 2vh 6vw;
-        font-size: 8vw;
+        margin: 9vh 0 2vh 6vw;
+        font-size: 5vw;
     }
 
     .skill-card ul li p {
         margin-left: 60px;
-        font-size: 3vw;
+        font-size: 2vw;
     }
 
     .aboutme-content > section > h1 {

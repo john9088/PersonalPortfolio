@@ -85,7 +85,7 @@ body {
 /* For Social media icon */
 
 .social{
-    z-index: 1;
+    z-index: 99999;
     position: fixed;
     display: block;
 	top: 40%;
@@ -276,10 +276,10 @@ body {
 #projects {
     position: relative;
     display: flex;
+    margin-top: 8vh;
     width: 100%;
     height: 100%;
     overflow-x: hidden;
-    /* overflow-y: visible; */
 }
 
 .project-container{
@@ -297,7 +297,6 @@ body {
 
 .project-container .project-head{
     position: relative;
-    background-color: coral;
     width:50%;
     height: auto;
     text-align: left;
@@ -317,14 +316,15 @@ body {
     padding: 10px;
     grid-gap: 5px;
     grid-template-columns: auto auto;
-    grid-template-row: auto auto;
-    border: 2px solid #000;
+    grid-template-rows: auto auto;
+    /* background-color: lightblue; */
+    /* border: 2px solid #000; */
     overflow-x: hidden;
 }
 
 .project-content container{
     position: relative;
-    border: 2px solid #000;
+    /* border: 2px solid #000; */
     height: 100%;
     width: 100%;
 }
@@ -337,29 +337,29 @@ body {
     opacity: 1;
 }
 
-.project-content container > video: hover{
-    opacity: 1;   
-}
+
 .proj-bth-container {
     z-index: 10;
     position: absolute;
     width:100%;
+    height:100%;
     text-align:center;
-    top: 40%;
     font-family:sans-serif;
 }
 
 .proj-btn {
     position: relative;
-    display:inline-block;
-    height:60px;
-    line-height:60px;
-    overflow:hidden;
-    position:relative;
-    text-align:center;
-    color:white;
-    border-radius:2px;
-    transition:0.5s;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    line-height: 40px;
+    overflow: hidden;
+    position: relative;
+    background-color: rgba(0,0,0,0.8);
+    text-align: center;
+    color: white;
+    border-radius: 2px;
+    transition: 0.3s;
 }
 
 
@@ -369,17 +369,26 @@ body {
     display:block;
     margin:0px 30px;
     height:100%;
+    font-size: 2vw;
     position:relative;
-    top:0%;
-    transition:0.5s;
+    top: 40%;
+    transition:0.3s;
+}
+
+.button-container-project{
+    position: relative;
+    display: flex;
+    top: 5vh;
+    width: 100%;
+    justify-content: space-evenly;
 }
 
 .project-content > container:hover  span{
-    top:-100%;    
+    top: -60%;    
 }
 
 .project-content > container:hover  video{
-    opacity: 0.4;    
+    opacity: 0.1;    
 }
 
 /* SECTION ABOUT ME START */
@@ -399,7 +408,7 @@ body {
     justify-content: space-between;
     width: 100%;
     height: 100%;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
 }
 
 .aboutme-content > section{
@@ -423,8 +432,6 @@ body {
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
-    border-left: 2px solid #000;
-    background-color: lightblue;
 }
 
 
@@ -435,7 +442,7 @@ body {
     position: relative;
     display: flex;
     width: 100%;
-    height: auto;
+    height: 100%;
     overflow-x: hidden;
     overflow-y: visible;
 }
@@ -445,8 +452,8 @@ body {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    height: auto;
-    overflow-y: hidden;
+    height: 100%;
+    /* overflow-y: hidden; */
 }
 
 .skill-content > section{
@@ -466,12 +473,10 @@ body {
 .skill-card{
     position: relative;
     width:50%;
-    height: auto;
+    height: 100%;
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
-    border-left: 2px solid #000;
-    background-color: lightblue;
 }
 
 .skill-card  section{
@@ -484,7 +489,7 @@ body {
     background-color: aliceblue;
     width: 70%;
     height: auto;
-    margin: 10% 25%;
+    margin: 1% 20%;
     border-radius: 20px;
     box-shadow: 10px 10px 20px; 
 }
@@ -524,10 +529,8 @@ body {
     flex-direction: column;
     width: 100%;
     height: 100vh;
-    top:8vh;
     overflow-x: hidden;
     overflow-y: hidden;
-    scroll-snap-align: center;
 }
 
 /*
