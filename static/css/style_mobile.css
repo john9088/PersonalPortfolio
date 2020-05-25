@@ -292,37 +292,7 @@
 
 
 @media (min-width: 640px) and (max-width: 1200px) {
-    .project-container { grid-template-columns: repeat(2, 1fr); }
-    .video{
-        margin-top: 30vh;
-    }
-    .proj-content > h1 {
-        top: 6vh;
-    }
-    .proj-content > hr{
-        top: 10vh;
-        left: 10vw;
-    } 
-
-    .proj-content > h3 {
-        top: 14vh;
-        margin-left: -27vw;
-    }
-
-    .proj-content > .tools {
-        margin-top: -15vh;
-        margin-left: 16vw;
-    }
-
-    .button-container-project {
-        top: 31vh;
-    }
-
-    .button-container-project button{
-        width: 15vw;
-        margin: 0;
-    }
-
+    
     .skill-content > section > h1 {
         margin: 6vh 0 2vh 6vw;
         font-size: 8vw;
@@ -337,9 +307,6 @@
         margin: 6vh 0 2vh 6vw;
         font-size: 8vw;
     }
-    /* .button-container-project .button2 {
-        margin: 1.5vw 0px 0px 65px;
-    } */
 }
 
 @media (max-width: 650px){

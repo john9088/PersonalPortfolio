@@ -179,14 +179,6 @@ body {
     align-content: center;
     justify-content: center;
  }
-.vline{
-    position: absolute;
-    width: 2px;
-    z-index: -1;
-    background-color: #c5c5c5;
-    height: 100%;
-    left: 50%;
- }
 
 #intro{
 	margin:0 auto;
@@ -284,130 +276,111 @@ body {
 #projects {
     position: relative;
     display: flex;
-    flex-direction: column;
-    top:8vh;
     width: 100%;
-    height: auto;
-    /* padding-bottom: 4vh; */
+    height: 100%;
     overflow-x: hidden;
-    overflow-y: visible;
-    scroll-snap-align: center;
-}
-
-.projects-head{
-    /* font-family: 'Quicksand', sans-serif; */
-    font-family: 'LilitaOne-Regular';
-    /* font-weight: 3vh; */
-    margin-top: 5vh;
-    color: #950740;
-    font-size:5vh ;
-
+    /* overflow-y: visible; */
 }
 
 .project-container{
-    position: relative;
-    margin: 25px 60px;
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: auto auto auto;
-    height: auto;
-    
-    /* border: 2px solid #c5c5c5; */
-    overflow-y: visible;
-}
-
-.project-container .proj{
-    height: 70vh;
-    box-shadow: 10px 50px 10px;
-}
-.video {
-    position: relative;
+    position:relative;
     width: 100%;
     height: 100%;
-    z-index: -1;
-    border: 2px solid #333;
-    object-fit:cover;
-}
-
-.proj-content{
-    position: relative;
-    height: 100%;
-    width: 100%;
-    margin-bottom:-70vh;
-    z-index: 1;
-    opacity: 0.99;
-    text-align: center;
-    color: #fff;
-    transition-duration: 0.4s;
-    background-color: black;
-}
-
-.proj-content:hover{
-    opacity: 0.8;
-}
-.proj-content > h1{
-    position: relative;
-    top: 10vh;
-  }
-
-  .proj-content > hr{
-    position: relative;
-    width: 25vw;
-    top: 18vh;
-    left: 3vw;
-    border: 0;
-    height: 3px;
-    background: rgba(225,0,0,0.7);
-  }
-
-  .proj-content > h3{
-    position: relative;
-    display: inline;
-    top: 30vh;
-    margin-left: -18vw;
-  }
-
-  .proj-content > .tools{
-    position: relative;
-    display: grid;
-    z-index: 1;
-    grid-template-columns: auto auto;
-    top: 26.5vh;
-    margin-left: 10vw;
-    grid-gap: 5px;
-  }
-
-  .proj-content span{
-    border: 2px solid rgb(145, 142, 142);
-    transition-duration: 0.4s;
-    border-radius: 20px;
-    cursor: default;
-  }
-
-  .proj-content span:hover{
-    opacity: 1;
-    color: #000;
-    background:rgb(173, 48, 48);
-  }
-
-.button-container-project{
-    position: absolute;
     display: flex;
-    top: 49vh;
+}
+
+.project-container section{
+    position: relative;
+    height: 100%;
+    width: 50%;
+}
+
+.project-container .project-head{
+    position: relative;
+    background-color: coral;
+    width:50%;
+    height: auto;
+    text-align: left;
+}
+
+.project-container .project-head > h1{
+    position: relative;
+    margin: 30vh 3.5vw;
+    font-size: 6vw;  
+}
+
+.project-content{
+    position: relative;
     width: 100%;
-    justify-content: space-evenly;
+    height: 100%;
+    display: grid;
+    padding: 10px;
+    grid-gap: 5px;
+    grid-template-columns: auto auto;
+    grid-template-row: auto auto;
+    border: 2px solid #000;
+    overflow-x: hidden;
 }
 
+.project-content container{
+    position: relative;
+    border: 2px solid #000;
+    height: 100%;
+    width: 100%;
+}
 
+.project-content container > video{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit:cover; 
+    opacity: 1;
+}
 
-.proj-title{
-    z-index: 1;
-    max-width: 25vw;
-    font-size: 2vw;
-    font-family: "Roboto-Regular";
+.project-content container > video: hover{
+    opacity: 1;   
+}
+.proj-bth-container {
+    z-index: 10;
     position: absolute;
+    width:100%;
+    text-align:center;
+    top: 40%;
+    font-family:sans-serif;
 }
 
+.proj-btn {
+    position: relative;
+    display:inline-block;
+    height:60px;
+    line-height:60px;
+    overflow:hidden;
+    position:relative;
+    text-align:center;
+    color:white;
+    border-radius:2px;
+    transition:0.5s;
+}
+
+
+/* BUTTON UP */
+.label-up {
+    position: relative;
+    display:block;
+    margin:0px 30px;
+    height:100%;
+    position:relative;
+    top:0%;
+    transition:0.5s;
+}
+
+.project-content > container:hover  span{
+    top:-100%;    
+}
+
+.project-content > container:hover  video{
+    opacity: 0.4;    
+}
 
 /* SECTION ABOUT ME START */
 
