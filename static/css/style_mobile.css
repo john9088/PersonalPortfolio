@@ -12,7 +12,7 @@
         margin-left: 0;
     }
     section#home {
-        z-index: -1;
+        /* z-index: -1; */
         align-content: center;
         justify-content: center;
         /* background: url('../photo/land_page_img.jpg') no-repeat center center/cover; */
@@ -157,7 +157,7 @@
     }
     .project-container .project-head > h1 {
         margin: 7vh 0 1.5vh 5vw;
-        font-size: 13vw;
+        font-size: 10vw;
     }
 
     .project-content{
@@ -184,23 +184,6 @@
         background-color: #555;
     }
 
-    #skills{
-        flex-direction: column;
-    }
-
-    .skill-content{
-        flex-direction: column;
-    }
-
-    .skill-content > section{
-        width:100%;
-    }
-
-    .skill-card{
-        width:100%;
-        background-color: lightblue;
-    }
-
     #aboutme{
         flex-direction: column;
     }
@@ -209,14 +192,88 @@
         flex-direction: column;
     }
 
-    .aboutme-content > section{
+    .aboutme-left{
+        background-color: coral;
+        width: 100%;
+        height: auto;
+    }
+    .aboutme-card{
+        background-color: lightblue;
         width:100%;
     }
 
-    .aboutme-card{
+    .aboutme-card .aboutme-info {
+        
+        margin: 2.5vh auto;
+    }
+
+    .aboutme-card .aboutme-text {
+        font-size: 2vh;
+    }
+
+    .aboutme-content .aboutme-left  h1 {
+        position: relative;
+        margin: 4vh 3.5vw;
+        font-size: 6vw;
+    }
+
+
+    #skills{
+        flex-direction: column;
+    }
+
+    .skill-content{
+        flex-direction: column;
+    }
+
+    .skill-content .skill-section-name {
+        position: relative;
+        background-color: coral;
+        width: 100%;
+        height: auto;
+        text-align: left;
+    }
+
+    .skill-head {
+        position: relative;
+        margin: 5vh 3.5vw;
+        font-size: 6vw;
+    }
+
+    .skill-card{
+        width:100%;
+        padding-top: 20px;
+        background-color: lightblue;
+    }
+
+    #career{
+        flex-direction: column;
+    }
+
+    .career-content{
+        flex-direction: column;
+    }
+
+    .career-left{
+        position: relative;
+        background-color: coral;
+        width: 100%;
+        height: auto;
+        text-align: left;
+    }
+    .career-card{
+        background-color: lightblue;
         width:100%;
     }
+
+    .career-left h1 {
+        margin: 7vh 0 1.5vh 5vw;
+        font-size: 10vw;
+    }
+    
 }   
+
+
 
 #nav:checked + .nav-btn {
     transform: rotate(45deg);
@@ -268,7 +325,7 @@
     }
 }
 
-@media screen and (max-width: 640px) {
+/* @media screen and (max-width: 640px) {
 
     .skill-content > section > h1 {
         margin: 6vh 0 1vh 0.5vw;
@@ -305,7 +362,7 @@
         margin: 6vh 0 2vh 6vw;
         font-size: 8vw;
     }
-}
+} */
 
 @media (max-width: 650px){
 	.timeline{

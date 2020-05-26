@@ -9,7 +9,7 @@ body {
     /* background-image: url("https://images.unsplash.com/photo-1472289065668-ce650ac443d2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"); */
     background-position: center;
     background-size: cover;
-    background: linear-gradient(90deg,  coral 0%,coral 50%,lightblue 50%,lightblue 100%);
+    background: linear-gradient(90deg,  coral 0%,coral 30%,lightblue 30%,lightblue 100%);
     width: 100%;
     color: #000;
     height: 100vh;
@@ -110,10 +110,6 @@ body {
 	transition: all 1s;
 }
 
-/* .social ul li:hover{
-
-	transform: translateX(90px);
-} */
 
 .social ul li.facebook:hover{
 	background-color: #3d5999;
@@ -289,15 +285,9 @@ body {
     display: flex;
 }
 
-.project-container section{
-    position: relative;
-    height: 100%;
-    width: 50%;
-}
-
 .project-container .project-head{
     position: relative;
-    width:50%;
+    width:30%;
     height: auto;
     text-align: left;
 }
@@ -305,26 +295,23 @@ body {
 .project-container .project-head > h1{
     position: relative;
     margin: 30vh 3.5vw;
-    font-size: 6vw;  
+    font-size: 4vw;  
 }
 
 .project-content{
     position: relative;
-    width: 100%;
+    width: 70%;
     height: 100%;
     display: grid;
     padding: 10px;
     grid-gap: 5px;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
-    /* background-color: lightblue; */
-    /* border: 2px solid #000; */
     overflow-x: hidden;
 }
 
 .project-content container{
     position: relative;
-    /* border: 2px solid #000; */
     height: 100%;
     width: 100%;
 }
@@ -397,7 +384,7 @@ body {
     position: relative;
     display: flex;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     overflow-x: hidden;
     overflow-y: visible;
 }
@@ -408,32 +395,211 @@ body {
     justify-content: space-between;
     width: 100%;
     height: 100%;
-    /* overflow-y: hidden; */
 }
 
-.aboutme-content > section{
+
+.aboutme-left{
     position: relative;
-    background-color: coral;
-    width:50%;
-    height: auto;
+    width:30%;
+    height: 100%;
+    
     text-align: left;
 }
 
-.aboutme-content > section > h1 {
+.aboutme-head{
     position: relative;
     margin: 30vh 3.5vw;
-    font-size: 6vw;
+    font-size: 4vw;
 }
 
 .aboutme-card{
     position: relative;
-    width:50%;
+    width:70%;
     height: 100%;
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
 }
 
+.aboutme-card .aboutme-info{
+    position: relative;
+    width: 90%;
+    height: 85%;
+    margin: 7.5vh auto;
+    border-radius: 20px;
+    background-color: rgba(0,0,0,0.8);
+    box-shadow: 10px 10px 10px;
+}
+
+.aboutme-card .aboutme-text{
+    position: relative;
+    text-align: left;
+    width: inherit;
+    height: inherit;
+    top: 10px;
+    left: 20px;
+    
+    font-size: 1.5vw;
+}
+
+/* SECTION Career START */
+
+#career{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+
+.career-content{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+
+.career-left{
+    position: relative;
+    width:30%;
+    height: 100%; 
+    text-align: left;
+}
+
+.career-left h1{
+    position: relative;
+    margin: 30vh 3.5vw;
+    font-size: 4vw;
+}
+
+.career-card{
+    position: relative;
+    width:70%;
+    height: 100%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+
+.timeline{
+	position: relative;
+	width: 100%;
+	height: auto;
+	align-content: center;
+	justify-content: center;
+}
+
+.timeline:before{
+	content: '';
+	position: absolute;
+	left: 50%;
+	width: 2px;
+	height:100%;
+	background: #c5c5c5;
+}
+
+
+
+.timeline ul{
+	display: flex;
+  	flex-direction: column;
+  	justify-content: space-around;
+    height: 100vh;
+    width: 100%;
+	margin: 0;
+	padding: 0;
+
+}
+.timeline ul li{
+	list-style: none;
+	position: relative;
+	width: 50%;
+	padding: 20px 40px;
+}
+
+.timeline ul li:nth-child(odd){
+	float: left;
+	text-align: right;
+	clear: both;
+}
+
+.timeline ul li:nth-child(even){
+	margin-left: 50%;
+	float: right;
+	text-align: left;
+	clear: both;
+}
+
+.content{
+	padding-bottom: 20px;
+}
+
+
+.timeline ul li:nth-child(odd):before{
+	content: '';
+	position: absolute;
+	top: 24px;
+	right: -6px;
+	width: 10px;
+	height: 10px;
+	background: coral;
+	border-radius: 50%;
+	box-shadow: 0 0 0 3px rgba(233,33,99,0.3);
+
+}
+
+.timeline ul li:nth-child(even):before{
+	content: '';
+	position: absolute;
+	top: 24px;
+	left: -4px;
+	width: 10px;
+	height: 10px;
+	background: coral;
+	border-radius: 50%;
+	box-shadow: 0 0 0 3px rgba(233,33,99,0.3);
+
+}
+
+.timeline ul li h3{
+	font-weight: 600;
+	color: coral;
+}
+
+.timeline ul li p{
+	margin: 10px 0 0;
+	padding: 0;
+}
+
+.timeline ul li .time h4{
+	margin: 0;
+	padding:0;
+	font-size: 14px;
+}
+
+.timeline ul li:nth-child(odd) .time{
+	position: absolute;
+	top: 12px;
+	right: -165px;
+	margin: 0;
+	padding: 8px 16px;
+	background: coral;
+	color:#fff;
+	border-radius: 18px;
+	box-shadow: 0 0 0 3px rgba(233,33,99,0.3);
+}
+
+.timeline ul li:nth-child(even) .time{
+	position: absolute;
+	top: 14px;
+	left: -140px;
+	margin: 0;
+	padding: 8px 16px;
+	background: coral;
+	color:#fff;
+	border-radius: 18px;
+	box-shadow: 0 0 0 3px rgba(233,33,99,0.3);
+}
 
 
 /* FOR SKILL SECTION */
@@ -442,7 +608,7 @@ body {
     position: relative;
     display: flex;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     overflow-x: hidden;
     overflow-y: visible;
 }
@@ -456,33 +622,37 @@ body {
     /* overflow-y: hidden; */
 }
 
-.skill-content > section{
+/* .skill-left{
     position: relative;
-    background-color: coral;
-    width:50%;
-    height: auto;
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+} */
+
+.skill-content .skill-section-name{
+    position: relative;
+    /* background-color: coral; */
+    width: 30%;
+    height: 100%;
     text-align: left;
 }
 
-.skill-content > section > h1 {
+.skill-head {
     position: relative;
     margin: 30vh 3.5vw;
-    font-size: 6vw;
+    font-size: 4vw;
 }
+
 
 .skill-card{
     position: relative;
-    width:50%;
+    width:70%;
     height: 100%;
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
 }
 
-.skill-card  section{
-    position: relative;
-    /* border: 2px solid #000; */
-}
 
 .skill-card  section > div{
     position: relative;
@@ -521,8 +691,6 @@ body {
     margin-bottom: 10px;
 }
 
-
-
 /* FOR CONTACT ME SECTION */
 #contact_me{
     display: flex;
@@ -532,16 +700,3 @@ body {
     overflow-x: hidden;
     overflow-y: hidden;
 }
-
-/*
-section#education {
-    background: url('https://source.unsplash.com/K2tdx2mFDHc/1600x900') no-repeat center center/cover;
-}
-
-section#experience {
-    background: url('https://source.unsplash.com/2aAHlfDOhJM/1600x900') no-repeat center center/cover;
-}
-
-section#contact {
-    background: url('https://images.unsplash.com/photo-1586850679688-4f36abf0a3b6?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixlib=rb-1.2.1&q=80&w=1600') no-repeat center center/cover;
-} */
