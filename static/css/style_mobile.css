@@ -109,8 +109,8 @@
         position: absolute;
         display: flex;
         flex-direction: column;
-        top: 40vh;
-        left: 1vw;
+        top: 5vh;
+        left: -50%;
         width: auto;
         justify-content: space-between;
     }
@@ -249,6 +249,16 @@
 
     .skill-card ul li {
         font-size: 2vh;
+    }
+
+    .skill-card ul li img {
+        height: 5vh;
+        width: auto;
+    }
+
+    .skill-card ul li p {
+        margin-left: 11vw;
+        top: -6vh;
     }
 
     #career{

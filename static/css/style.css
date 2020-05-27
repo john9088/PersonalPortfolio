@@ -232,10 +232,8 @@ body {
 .button-container-home {
     position: relative;
     display: flex;
-    top: 80%;
-    left: -44%;
+    left: 16%;
     width: auto;
-    justify-content: space-between;
 }
 
 .button {
@@ -683,14 +681,14 @@ body {
 
 .skill-card  ul li p{
     position: relative;
-    margin-left: 40px;
-    top: -50px;
+    margin-left: 4vw;
+    top: -7vh;
 }
 
 .skill-card  ul li img{
     position: relative;
-    height: 40px;
-    width: 40px;
+    height: auto;
+    width: 3vw;
     padding-right: 5px;
     margin-bottom: 10px;
 }
