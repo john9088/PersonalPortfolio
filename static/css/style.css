@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -18,9 +19,10 @@ body {
 }
 .container {
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
+    height: auto;
     overflow-y: auto;
-    scroll-behavior: smooth;
+   
 }
 
 
@@ -624,12 +626,6 @@ body {
     /* overflow-y: hidden; */
 }
 
-/* .skill-left{
-    position: relative;
-    display: flex;
-    width: 50%;
-    flex-direction: column;
-} */
 
 .skill-content .skill-section-name{
     position: relative;
@@ -694,11 +690,170 @@ body {
 }
 
 /* FOR CONTACT ME SECTION */
-#contact_me{
+#contact{
+    position: relative;
     display: flex;
-    flex-direction: column;
     width: 100%;
+    min-height: 100%;
     height: auto;
     overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-y: visible;
+}
+
+.contact-content{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+}
+
+
+.contact-left{
+    position: relative;
+    width:30%;
+    height: 100%;
+    
+    text-align: left;
+}
+
+.contact-head{
+    position: relative;
+    margin: 30vh 3.5vw;
+    font-size: 4vw;
+}
+
+.contact-card{
+    position: relative;
+    width:70%;
+    height: 100%;
+    padding: 12vh 0vw;
+}
+
+.contactme-container{
+    position: relative;
+	width: 100%;
+	padding: 20px;
+}		
+
+.contactme-container h2{
+	width: 100%;
+	color:coral;
+	font-size: 36px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.contactme-container .row100{
+	position: relative;
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+}
+
+.contactme-container .row100 .col{
+	position: relative;
+	width: 100%;
+	padding: 0 10px;
+	margin: 30px 0 10px;
+	transition: 0.5s;
+	text-align: center;
+}
+
+.contactme-container .row100 .inputbox {
+    position: relative;
+    width: 60%;
+    height: 60px;
+    margin: 0 auto;
+    color: coral;
+}
+
+.contactme-container .row100 .inputbox input, 
+.intextarea{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	box-shadow: none;
+	outline: none;
+	border: none;
+	font-size: 18px;
+	padding: 0 10px;
+	z-index: 1;
+	color: #000;
+}
+
+
+.contactme-container .row100 .inputbox .text{
+	position: absolute;
+	top: 0;
+	left: 0;
+	line-height: 40px;
+	font-size: 18px;
+	padding: 0 10px;
+	display: block;
+	transition: 0.5s;
+	pointer-events: none;
+	
+}
+
+.contactme-container .row100 .inputbox input:focus + .text, 
+.contactme-container .row100 .inputbox input:valid + .text{
+	top: -35px;
+	left: -10px;
+}
+
+ .line{
+	position: absolute;
+	bottom: 0;
+	display: block;
+	width: 100%;
+	height: 2px;
+	background: coral;
+	transition: 0.5s;
+	border-radius: 2px;
+	pointer-events: none;
+
+}
+
+.contactme-container .row100 .inputbox input:focus ~ .line, 
+.contactme-container .row100 .inputbox input:valid ~ .line{
+	height: 100%;
+}
+
+.contactme-contactme-container .row100 .inputbox .textarea{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding: 10px 0;
+}
+
+
+.intextarea{
+	height: 100%;
+	resize: none;
+
+}
+
+
+.contactme-container .row100 .inputbox textarea:focus + .text,
+.contactme-container .row100 .inputbox textarea:valid + .text{
+	top: -35px;
+	left: -10px;
+}
+
+.contactme-container .row100 .inputbox textarea:focus ~ .line,
+.contactme-container .row100 .inputbox textarea:valid ~ .line{
+	height: 100%;
+}
+
+input[type="submit"]{
+	border: none;
+	padding: 7px 35px;
+	cursor: pointer;
+	outline: none;
+	background: coral;
+	color: #000;
+	font-size: 18px;
+	border-radius: 2px; 
 }
