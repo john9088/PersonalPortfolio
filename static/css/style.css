@@ -8,9 +8,13 @@
 body {
     font-family:'DM Sans', sans-serif ;
     /* background-image: url("https://images.unsplash.com/photo-1472289065668-ce650ac443d2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"); */
+    background-image: url(/static/photo/land_page_img.jpg) ;
     background-position: center;
     background-size: cover;
-    background: linear-gradient(90deg,  coral 0%,coral 30%,lightblue 30%,lightblue 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* background: linear-gradient(90deg,  #38040e 0%,#38040e 30%,#250902 30%,#250902 100%); */
+    /* background: linear-gradient(90deg,  #373f51 0%,#373f51 30%,#1b1b1e 30%,#1b1b1e 100%); */
     width: 100%;
     color: #000;
     height: 100vh;
@@ -21,8 +25,7 @@ body {
     width: 100%;
     min-height: 100vh;
     height: auto;
-    overflow-y: auto;
-   
+    overflow-y: auto;  
 }
 
 
@@ -61,7 +64,7 @@ body {
 }
 
 .nav-links li a:hover{
-    color: #950740;
+    color: #58a4b0;
 }
 
 .burger{
@@ -169,8 +172,9 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    top:8vh;
-    height: 100vh;
+    /* top:8vh; */
+    min-height: 100vh;
+    height: auto;
     overflow-x: hidden;
     overflow-y: hidden;
     text-align: center;
@@ -186,7 +190,7 @@ body {
     display: flex;
     margin-bottom:50px;
     box-shadow: 20px 20px 40px;
-    background: rgb(68, 67, 67);
+    background: #373f51;
     opacity: 1;
 	transition: 2s all ease-in-out;
 }
@@ -197,11 +201,11 @@ body {
     left: -10%;
     text-align: left;
     font-family: 'DM Sans', sans-serif;
-    color: black;
+    color: #000;
 }
 
 .hero-content span{
-    color: rgb(192, 47, 47);
+    color: #000;
 }
 
 .intro-appear{
@@ -272,11 +276,12 @@ body {
 #projects {
     position: relative;
     display: flex;
-    margin-top: 8vh;
     width: 100%;
-    min-height: 100%;
+    min-height: 100vh;
     height: auto;
+    background: linear-gradient(90deg,  #38040e 0%,#38040e 30%,#250902 30%,#250902 100%);
     overflow-x: hidden;
+    overflow-y: visible;
 }
 
 .project-container{
@@ -295,6 +300,7 @@ body {
 
 .project-container .project-head > h1{
     position: relative;
+    color: #fff;
     margin: 30vh 3.5vw;
     font-size: 4vw;  
 }
@@ -343,11 +349,11 @@ body {
     line-height: 40px;
     overflow: hidden;
     position: relative;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0,0,0,0.3);
     text-align: center;
     color: white;
     border-radius: 2px;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 
 
@@ -360,7 +366,7 @@ body {
     font-size: 2vw;
     position:relative;
     top: 40%;
-    transition:0.3s;
+    transition:0.5s;
 }
 
 .button-container-project{
@@ -386,6 +392,7 @@ body {
     display: flex;
     width: 100%;
     min-height: 100%;
+    background: linear-gradient(90deg,  #7A7A7A 0%,#7A7A7A 30%,#8F8F8F 30%,#8F8F8F 100%);
     height: auto;
     overflow-x: hidden;
     overflow-y: visible;
@@ -411,6 +418,7 @@ body {
 .aboutme-head{
     position: relative;
     margin: 30vh 3.5vw;
+    color: #000;
     font-size: 4vw;
 }
 
@@ -448,6 +456,7 @@ body {
     display: flex;
     width: 100%;
     min-height: 100%;
+    background: linear-gradient(90deg,  #333333 0%,#333333 30%,#1f1f1f 30%,#1f1f1f 100%);
     height: auto;
     overflow-x: hidden;
     overflow-y: visible;
@@ -472,6 +481,7 @@ body {
 .career-left h1{
     position: relative;
     margin: 30vh 3.5vw;
+    color: #fff;
     font-size: 4vw;
 }
 
@@ -613,6 +623,7 @@ body {
     width: 100%;
     min-height: 100vh;
     height: auto;
+    background: linear-gradient(90deg,  #05080F 0%,#05080F 30%,#010820 30%,#010820 100%);
     overflow-x: hidden;
     overflow-y: visible;
 }
@@ -621,6 +632,7 @@ body {
     position: relative;
     display: flex;
     justify-content: space-between;
+    margin-top: 5vh;
     width: 100%;
     height: 100%;
     /* overflow-y: hidden; */
@@ -638,6 +650,7 @@ body {
 .skill-head {
     position: relative;
     margin: 30vh 3.5vw;
+    color: #fff;
     font-size: 4vw;
 }
 
@@ -695,6 +708,7 @@ body {
     display: flex;
     width: 100%;
     min-height: 100%;
+    background: linear-gradient(90deg,  #FF8533 0%,#FF8533 30%,#FFD6BA 30%,#FFD6BA 100%);
     height: auto;
     overflow-x: hidden;
     overflow-y: visible;
@@ -720,6 +734,7 @@ body {
 .contact-head{
     position: relative;
     margin: 30vh 3.5vw;
+    color:#fff;
     font-size: 4vw;
 }
 

@@ -7,7 +7,7 @@
 @media screen and (orientation: portrait){
     body{
         overflow-x: hidden;
-        background: lightblue;
+        background: #1b1b1e;
     }
     .logo{
         margin-left: 0;
