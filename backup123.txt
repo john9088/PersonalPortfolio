@@ -1,0 +1,4 @@
+conda==4.8.3
+conda-package-handling==1.6.0
+menuinst==1.4.16
+pywin32==227

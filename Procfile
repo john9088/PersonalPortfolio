@@ -1,0 +1,1 @@
+web: gunicorn jasonbritto.wsgi --log-file -
