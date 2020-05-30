@@ -4,10 +4,14 @@
     }
 }
 
-@media screen and (orientation: portrait){
+@media screen and (orientation: portrait) , (max-width:480px){
     body{
         overflow-x: hidden;
-        background: #1b1b1e;
+        /* background: #1b1b1e; */
+
+    }
+    .container{
+        min-height: 350px;
     }
     .logo{
         margin-left: 0;
@@ -137,6 +141,7 @@
     #projects{
         overflow-y: visible;
         flex-direction: column;
+        background: none;
     }
 
     .project-content{
@@ -152,17 +157,21 @@
         width: 100%;
     }
 
-    .project-container .project-head{
+    .project-container .project-section-name {
+        position: relative;
+        background-color: #38040e;
         width: 100%;
-        background-color: coral;
+        height: auto;
+        text-align: left;
     }
-    .project-container .project-head > h1 {
+
+    .project-head {
         margin: 7vh 0 1.5vh 5vw;
         font-size: 10vw;
     }
 
     .project-content{
-        background-color: lightblue;
+        background-color: #250902;
     }
 
     .label-up {
@@ -187,6 +196,7 @@
 
     #aboutme{
         flex-direction: column;
+        background: none;
     }
 
     .aboutme-content{
@@ -194,12 +204,12 @@
     }
 
     .aboutme-left{
-        background-color: coral;
+        background-color: #7A7A7A;
         width: 100%;
         height: auto;
     }
     .aboutme-card{
-        background-color: lightblue;
+        /* background-color: #8F8F8F; */
         width:100%;
     }
 
@@ -214,8 +224,8 @@
 
     .aboutme-content .aboutme-left  h1 {
         position: relative;
-        margin: 4vh 3.5vw;
-        font-size: 6vw;
+        margin: 7vh 0 1.5vh 5vw;
+        font-size: 10vw;
     }
 
 
@@ -225,11 +235,12 @@
 
     .skill-content{
         flex-direction: column;
+        margin-top: 0;
     }
 
     .skill-content .skill-section-name {
         position: relative;
-        background-color: coral;
+        background-color: #05080F;
         width: 100%;
         height: auto;
         text-align: left;
@@ -237,14 +248,14 @@
 
     .skill-head {
         position: relative;
-        margin: 5vh 3.5vw;
-        font-size: 6vw;
+        margin: 7vh 0 1.5vh 5vw;
+        font-size: 10vw;
     }
 
     .skill-card{
         width:100%;
         padding-top: 20px;
-        background-color: lightblue;
+        background-color: #010820;
     }
 
     .skill-card ul li {
@@ -271,13 +282,14 @@
 
     .career-left{
         position: relative;
-        background-color: coral;
+        background-color: #05080F;
         width: 100%;
         height: auto;
         text-align: left;
     }
+    
     .career-card{
-        background-color: lightblue;
+        background-color: #1f1f1f;
         width:100%;
     }
 
@@ -285,7 +297,63 @@
         margin: 7vh 0 1.5vh 5vw;
         font-size: 10vw;
     }
+
+    #contact{
+        flex-direction: column;
+    }
+
+    .contact-content{
+        flex-direction: column;
+    }
+
+    .contact-left{
+        position: relative;
+        background-color: #333333;
+        width: 100%;
+        height: auto;
+        text-align: left;
+    }
     
+    .contact-card{
+        background-color: #1f1f1f;
+        width:100%;
+        padding: 0;
+    }
+
+    .contact-head {
+        position: relative;
+        margin: 7vh 0 1.5vh 5vw;
+        font-size: 10vw;
+    }
+
+    .contactme-container {
+        padding: 0;
+    }
+
+    .contact-left h1 {
+        margin: 7vh 0 1.5vh 5vw;
+        font-size: 10vw;
+    }
+
+    .contactme-container .row100 .inputbox {
+        
+        margin: 0 0;
+    }
+
+    .contactme-container .row100 {
+        grid-template-columns: auto;
+    }
+    
+
+    .contactme-container .row100 .inputbox {
+        width: 90%;
+    }
+
+    .contactme-container .row100 .col {
+        margin: 0;
+        margin-top: 4vh;
+        margin-left: 5vw;
+    }
 }   
 
 
