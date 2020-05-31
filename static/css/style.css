@@ -7,16 +7,14 @@
 
 body {
     font-family:'DM Sans', sans-serif ;
-    /* background-image: url("https://images.unsplash.com/photo-1472289065668-ce650ac443d2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"); */
-    background-image: url(/static/photo/land_page_img.jpg) ;
+    /* background-image: url(/static/photo/land_page_img.jpg) ; */
+    background-color: #000;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    /* background: linear-gradient(90deg,  #38040e 0%,#38040e 30%,#250902 30%,#250902 100%); */
-    /* background: linear-gradient(90deg,  #373f51 0%,#373f51 30%,#1b1b1e 30%,#1b1b1e 100%); */
     width: 100%;
-    color: #000;
+    color: rgb(31, 30, 30);
     height: 100vh;
     justify-content: center;
     align-content: center;
@@ -172,7 +170,6 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    /* top:8vh; */
     min-height: 100vh;
     height: auto;
     overflow-x: hidden;
@@ -190,7 +187,7 @@ body {
     display: flex;
     margin-bottom:50px;
     box-shadow: 20px 20px 40px;
-    background: #373f51;
+    background: rgb(68, 67, 67);
     opacity: 1;
 	transition: 2s all ease-in-out;
 }
@@ -278,8 +275,10 @@ body {
     display: flex;
     width: 100%;
     min-height: 100vh;
+    margin: 0 auto;
     height: auto;
-    background: linear-gradient(90deg,  #38040e 0%,#38040e 30%,#250902 30%,#250902 100%);
+    /* background: #fff; */
+    /* background: linear-gradient(90deg,  #38040e 0%,#38040e 30%,#250902 30%,#250902 100%); */
     overflow-x: hidden;
     overflow-y: visible;
 }
@@ -289,13 +288,7 @@ body {
     width: 100%;
     display: flex;
 }
-/*
-.project-container .project-head{
-    position: relative;
-    width:30%;
-    height: auto;
-    text-align: left;
-} */
+
 
 .project-container .project-section-name{
     position: relative;
@@ -313,13 +306,6 @@ body {
 }
 
 
-/* .project-container .project-head > h1{
-    position: relative;
-    color: #fff;
-    margin: 30vh 3.5vw;
-    font-size: 4vw;  
-} */
-
 .project-content{
     position: relative;
     width: 70%;
@@ -334,6 +320,8 @@ body {
 
 .project-content container{
     position: relative;
+    border: solid 2px #c5c5c5;
+    border-radius: 20px;
     height: 100%;
     width: 100%;
 }
@@ -342,6 +330,7 @@ body {
     position: relative;
     width: 100%;
     height: 100%;
+    border-radius: 20px;
     object-fit:cover; 
     opacity: 1;
 }
@@ -406,8 +395,9 @@ body {
     position: relative;
     display: flex;
     width: 100%;
-    min-height: 100%;
-    background: linear-gradient(90deg,  #7A7A7A 0%,#7A7A7A 30%,#8F8F8F 30%,#8F8F8F 100%);
+    min-height: 100vh;
+    margin: 0 auto;
+    /* background: linear-gradient(90deg,  #7A7A7A 0%,#7A7A7A 30%,#8F8F8F 30%,#8F8F8F 100%); */
     height: auto;
     overflow-x: hidden;
     overflow-y: visible;
@@ -433,7 +423,7 @@ body {
 .aboutme-head{
     position: relative;
     margin: 30vh 3.5vw;
-    color: #000;
+    color: #fff;
     font-size: 4vw;
 }
 
@@ -449,7 +439,7 @@ body {
     height: 85%;
     margin: 7.5vh auto;
     border-radius: 20px;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(255,255,255,0.8);
     box-shadow: 10px 10px 10px;
 }
 
@@ -470,8 +460,9 @@ body {
     position: relative;
     display: flex;
     width: 100%;
-    min-height: 100%;
-    background: linear-gradient(90deg,  #333333 0%,#333333 30%,#1f1f1f 30%,#1f1f1f 100%);
+    min-height: 100vh;
+    margin: 0 auto;
+    /* background: linear-gradient(90deg,  #333333 0%,#333333 30%,#1f1f1f 30%,#1f1f1f 100%); */
     height: auto;
     overflow-x: hidden;
     overflow-y: visible;
@@ -502,6 +493,8 @@ body {
 
 .career-card{
     position: relative;
+    border: solid 2px  #c5c5c5;
+    border-radius: 20px;
     width:70%;
     height: 100%;
 }
@@ -637,8 +630,9 @@ body {
     display: flex;
     width: 100%;
     min-height: 100vh;
+    margin: 0 auto;
     height: auto;
-    background: linear-gradient(90deg,  #05080F 0%,#05080F 30%,#010820 30%,#010820 100%);
+    /* background: linear-gradient(90deg,  #05080F 0%,#05080F 30%,#010820 30%,#010820 100%); */
     overflow-x: hidden;
     overflow-y: visible;
 }
@@ -722,8 +716,8 @@ body {
     position: relative;
     display: flex;
     width: 100%;
-    min-height: 100%;
-    background: linear-gradient(90deg,  #FF8533 0%,#FF8533 30%,#FFD6BA 30%,#FFD6BA 100%);
+    min-height: 100vh;
+    /* background: linear-gradient(90deg,  #FF8533 0%,#FF8533 30%,#FFD6BA 30%,#FFD6BA 100%); */
     height: auto;
     overflow-x: hidden;
     overflow-y: visible;
