@@ -163,22 +163,9 @@
     .project-head {
         margin: 7vh 0 1.5vh 5vw;
         font-size: 10vw;
-    }
+        }
 
-    .project-content container{
-        transform: translateX(100vw);
-        transition: 1.5s all ease-in-out;
-    }
-    /* .proj1{
-        
-
-    } */
-
-
-    /* .project-content{
-        background-color: #250902;
-    } */
-
+   
     .label-up {
         font-size: 3vh;
     }

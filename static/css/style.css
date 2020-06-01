@@ -40,7 +40,7 @@ body {
 
 .nav-links{
     display: flex;
-    width: 40%;
+    width: 50%;
     list-style: none;
     justify-content: space-around;
 
@@ -118,11 +118,11 @@ body {
 	background-color: #3d5999;
 }
 
-.social ul li.twitter:hover{
+.social ul li.linkedin:hover{
 	background-color: #55acee;
 }
 
-.social ul li.google-plus:hover{
+.social ul li.github:hover{
 	background-color: #dd4b39;
 }
 
@@ -302,6 +302,8 @@ body {
     position: relative;
     margin: 30vh 3.5vw;
     color: #fff;
+    transform: translateX(-100vw);
+    transition: 1.5s all ease-in-out;
     font-size: 4vw;
 }
 
@@ -312,7 +314,7 @@ body {
     height: 100%;
     display: grid;
     padding: 10px;
-    grid-gap: 5px;
+    grid-gap: 15px;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
     overflow-x: hidden;
@@ -324,6 +326,8 @@ body {
     border-radius: 20px;
     height: 100%;
     width: 100%;
+    transform: translateX(100vw);
+    transition: 1s all ease-in-out;
 }
 
 .project-content container > video{
@@ -634,7 +638,7 @@ body {
     height: auto;
     /* background: linear-gradient(90deg,  #05080F 0%,#05080F 30%,#010820 30%,#010820 100%); */
     overflow-x: hidden;
-    overflow-y: visible;
+    overflow-y: hidden;
 }
 
 .skill-content{
@@ -658,9 +662,11 @@ body {
 
 .skill-head {
     position: relative;
-    margin: 30vh 3.5vw;
+    margin: 30vh 5.5vw;
     color: #fff;
     font-size: 4vw;
+    transform: translateX(-100vw);
+    transition: 1.5s all ease-in-out;
 }
 
 
@@ -671,6 +677,13 @@ body {
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
+}
+
+
+.skill-card section{
+    transform: translateY(100vh);
+    transition: 1s all ease-in-out;
+    opacity: 0;
 }
 
 

@@ -59,36 +59,123 @@ window.addEventListener('scroll', ()=>{
 },true);
 
 window.addEventListener('scroll', ()=>{
-  if(window.innerHeight < window.innerWidth){
-    //For Desktop
-  
-  }
-  else{
-    //For Mobile
-    var proj1 = document.querySelector('.proj1');
-    var proj2 = document.querySelector('.proj2');
-    var proj3 = document.querySelector('.proj3');
-    var proj4 = document.querySelector('.proj4');
+  var projTitle = document.querySelector('.project-head');
+  var proj1 = document.querySelector('.proj1');
+  var proj2 = document.querySelector('.proj2');
+  var proj3 = document.querySelector('.proj3');
+  var proj4 = document.querySelector('.proj4');
+  var proj1Position = proj1.getBoundingClientRect().top;
+  var proj2Position = proj2.getBoundingClientRect().top;
+  var proj3Position = proj3.getBoundingClientRect().top;
+  var proj4Position = proj4.getBoundingClientRect().top;
 
-    var proj1Position = proj1.getBoundingClientRect().top;
-    var proj2Position = proj2.getBoundingClientRect().top;
-    var proj3Position = proj3.getBoundingClientRect().top;
-    var proj4Position = proj4.getBoundingClientRect().top;
-    var screenSlideProj = window.innerHeight/1.3;
-    
+  var skillTitle = document.querySelector('.skill-head');
+  var skillLanguage = document.querySelector('.language');
+  var skillWebTech = document.querySelector('.web-technologies');
+  var skillDataSci = document.querySelector('.data-science');
+  var skillOther = document.querySelector('.others');
+  var skillLanguagePosition = skillLanguage.getBoundingClientRect().top;
+  var skillWebTechPosition = skillWebTech.getBoundingClientRect().top;
+  var skillDataSciPosition = skillDataSci.getBoundingClientRect().top;
+  var skillOtherPosition = skillOther.getBoundingClientRect().top;
+
+
+
+  if(window.innerHeight < window.innerWidth){
+    //For Project Section
+    var screenSlideProj = window.innerHeight/1.25;
     if(proj1Position < screenSlideProj){
       proj1.style.transform = "translateX(0)";
-      console.log(proj1Position);
+      proj2.style.transform = "translateX(0)";
+      projTitle.style.transform = "translateX(0)";
     }
+    
+    if(proj3Position < (screenSlideProj + proj1.offsetHeight/6)){
+      proj3.style.transform = "translateX(0)";
+      proj4.style.transform = "translateX(0)";
+      
+    }
+
+    //For Skill Section
+    var screenSlideSkill = window.innerHeight*1.60;
+    if(skillWebTechPosition < screenSlideSkill){
+      skillLanguage.style.transform = "translateY(0)";
+      skillLanguage.style.opacity = "1";
+      skillWebTech.style.transform = "translateY(0)";
+      skillWebTech.style.opacity = "1";
+      skillTitle.style.transform = "translateX(0)";
+    }
+
+    if(skillDataSciPosition < (screenSlideSkill + skillLanguagePosition/3)){
+      skillDataSci.style.transform = "translateY(0)";
+      skillDataSci.style.opacity = "1";
+      skillOther.style.transform = "translateY(0)";
+      skillOther.style.opacity = "1";
+    }
+
+  }
+  else{
+    //For Skill
+    console.log(skillWebTechPosition + "-->" + window.innerHeight);
+    var screenSlideSkill = window.innerHeight*1.8;
+    if(skillWebTechPosition < screenSlideSkill){
+      skillLanguage.style.transform = "translateY(0)";
+      skillLanguage.style.opacity = "1";
+      skillWebTech.style.transform = "translateY(0)";
+      skillWebTech.style.opacity = "1";
+      skillTitle.style.transform = "translateX(0)";
+    }
+
+    if(skillDataSciPosition < (screenSlideSkill + skillLanguagePosition/6)){
+      skillDataSci.style.transform = "translateY(0)";
+      skillDataSci.style.opacity = "1";
+      skillOther.style.transform = "translateY(0)";
+      skillOther.style.opacity = "1";
+    }
+
+     //var skillOtherbottom = skillOther.getBoundingClientRect().bottom;
+     if(skillWebTechPosition < 0){
+    //   skillLanguage.style.transform = "translateY(-100vh)";
+    //   skillLanguage.style.opacity = "0";
+    //   skillWebTech.style.transform = "translateY(-100vh)";
+    //   skillWebTech.style.opacity = "0";
+      skillTitle.style.transform = "translateX(100vw)";
+    //   skillDataSci.style.transform = "translateY(-100vh)";
+    //   skillDataSci.style.opacity = "0";
+    //   skillOther.style.transform = "translateY(-100vh)";
+    //   skillOther.style.opacity = "0";
+     }
+    //For Project
+    var screenSlideProj = window.innerHeight/1.3;
+    if(proj1Position < screenSlideProj){
+      proj1.style.transform = "translateX(0)";
+      projTitle.style.transform = "translateX(0)";
+    }
+    if(proj1Position < 0){
+       //proj1.style.transform = "translateX(-100vw)";
+       projTitle.style.transform = "translateX(100vw)";
+     }
+
     if(proj2Position < (screenSlideProj + proj1.offsetHeight/6)){
       proj2.style.transform = "translateX(0)";
     }
+    // if(proj2Position < 0){
+    //   proj2.style.transform = "translateX(-100vw)";
+    // }
+
     if(proj3Position < (screenSlideProj + proj1.offsetHeight/8)){
       proj3.style.transform = "translateX(0)";
     }
+    // if(proj3Position < 0){
+    //   proj3.style.transform = "translateX(-100vw)";
+    // }
+
     if(proj4Position < (screenSlideProj + proj1.offsetHeight/10)){
       proj4.style.transform = "translateX(0)";
     }
+    // if(proj4Position < 0){
+    //   proj4.style.transform = "translateX(-100vw)";
+    // }
   } 
 },true);
 
