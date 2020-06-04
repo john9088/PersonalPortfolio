@@ -21,7 +21,7 @@
                         <span class="label-up">
                             <div class="button-container-project">
                                 <button class="button button1">View Code</button>
-                                <button class="button button2">Demo</button>
+                                <button id="viewProj1" class="button button2">Demo</button>
                             </div>
                         </span>
                     </div>
@@ -40,7 +40,7 @@
                         <span class="label-up">
                             <div class="button-container-project">
                                 <button class="button button1">View Code</button>
-                                <button class="button button2">Demo</button>
+                                <button id="viewProj2" class="button button2">Demo</button>
                             </div>
                         </span>
                     </div>
@@ -59,7 +59,7 @@
                         <span class="label-up">
                             <div class="button-container-project">
                                 <button class="button button1">View Code</button>
-                                <button class="button button2">Demo</button>
+                                <button id="viewProj3" class="button button2">Demo</button>
                             </div>
                         </span>
                     </div>
@@ -78,7 +78,7 @@
                         <span class="label-up">
                             <div class="button-container-project">
                                 <button class="button button1">View Code</button>
-                                <button class="button button2">Demo</button>
+                                <button id="viewProj4" class="button button2">Demo</button>
                             </div>
                         </span>
                     </div>
@@ -87,7 +87,9 @@
                 
                 <video class="video-proj1" src="{% static '/video/proj3.mp4'%}" autoplay muted loop />
             </container>
+            
         </section>
     </div>
+    {% include 'jason_profile/projectView.html' %}
     
 </section>

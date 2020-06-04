@@ -196,6 +196,32 @@
         background-color: #555;
     }
 
+    #video section {
+        grid-template-columns: auto;
+        grid-gap: 10px;
+        height: 100vh;
+    }
+
+    #video section video {
+        width: 98vw;
+        justify-self: center;
+        align-self:center ;
+        margin-top: 10vh;
+    }
+
+    #video section div {
+        width: 98vw;
+        height: 40vh;
+        justify-self: center;
+        align-self: center;
+        overflow-y: hidden;
+        margin-top: -15vh;
+    }
+
+    .cross {
+        top: 15vh;
+    }
+
     #aboutme{
         flex-direction: column;
         background: none;
@@ -339,6 +365,15 @@
     .contactme-container .row100 .inputbox {
         
         margin: 0 0;
+    }
+    .contactme-container .row100 .inputbox .text {
+        line-height: 7vh;
+        font-size: 1.5vh;
+    }
+
+    .contactme-container .row100 .inputbox input, 
+    .intextarea{
+	font-size: 1vh;
     }
 
     .contactme-container .row100 {

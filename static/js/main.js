@@ -13,37 +13,17 @@ const rightArrow = document.querySelector('.right');
 const selectedParent = document.querySelector('.controls ul');
 var index = 0;
 
-//FOR PROJECT CARESOL
-// document.querySelectorAll('.controls ul li').forEach(function(indicator,ind){
 
-// 	indicator.addEventListener('click',function() {
-// 		index = ind;
-// 		document.querySelector('.controls .selected').classList.remove('selected');
-// 		indicator.classList.add('selected');
-// 		slider.style.transform = 'translate(' +index*(-25)+ '%)';	
-// 	});
-// });
+var projView1 = document.querySelector('.video1');
+var projView2 = document.querySelector('.video2');
+var projView3 = document.querySelector('.video3');
+var projView4 = document.querySelector('.video4');
+var sectionVideo = document.querySelectorAll("[id='video'] section");
+var projGrid1 = document.getElementById('viewProj1');
+var projGrid2 = document.getElementById('viewProj2');
+var projGrid3 = document.getElementById('viewProj3');
+var projGrid4 = document.getElementById('viewProj4');
 
-
-
-// rightArrow.addEventListener('click',function(){
-// 	index = (index < 3)? index + 1:3;
-// 	document.querySelector('.controls .selected').classList.remove('selected');
-// 	selectedParent.children[index].classList.add('selected');
-// 	slider.style.transform = 'translate(' +index*(-25)+ '%)';
-
-// });
-
-// leftArrow.addEventListener('click',function(){
-// 	index = (index > 0)? index - 1:0;
-// 	document.querySelector('.controls .selected').classList.remove('selected');
-// 	selectedParent.children[index].classList.add('selected');
-// 	slider.style.transform = 'translate(' +index*(-25)+ '%)';
-
-// });
-
-
-//window.addEventListener('scroll',scrollAppear);
 //TO HIDE INTRO
 window.addEventListener('scroll', ()=>{
   var introText = document.getElementById('intro');
@@ -84,6 +64,14 @@ window.addEventListener('scroll', ()=>{
   var aboutmePosition = aboutmecontent.getBoundingClientRect().top;
 
 
+  var careercontent = document.querySelector('.career-info');
+  var careerTitle = document.querySelector('.career-head');
+  var careerPosition = careercontent.getBoundingClientRect().top;
+
+  var contactcontent = document.querySelector('.contactme-container');
+  var contactTitle = document.querySelector('.contact-head');
+  var contactPosition = contactcontent.getBoundingClientRect().top;
+
   if(window.innerHeight < window.innerWidth){
     //For Project Section
     var screenSlideProj = window.innerHeight/1.25;
@@ -97,14 +85,14 @@ window.addEventListener('scroll', ()=>{
       proj2.style.transform = "translateX(100vw)";
       projTitle.style.transform = "translateX(-100vw)";
     }
-    
+
     if(proj3Position < (screenSlideProj + proj1.offsetHeight/6)){
       proj3.style.transform = "translateX(0)";
       proj4.style.transform = "translateX(0)";
     }
     if(proj3Position < -(proj1.offsetHeight/2+ proj1.offsetHeight/6)){
       proj3.style.transform = "translateX(100vw)";
-      proj4.style.transform = "translateX(100vw)";   
+      proj4.style.transform = "translateX(100vw)";
     }
 
     if(window.innerHeight < proj1Position){
@@ -112,7 +100,7 @@ window.addEventListener('scroll', ()=>{
       proj2.style.transform = "translateX(100vw)";
       projTitle.style.transform = "translateX(-100vw)";
       proj3.style.transform = "translateX(100vw)";
-      proj4.style.transform = "translateX(100vw)";   
+      proj4.style.transform = "translateX(100vw)";
     }
 
     //For Skill Section
@@ -161,16 +149,45 @@ window.addEventListener('scroll', ()=>{
     if(aboutmePosition < screenSlideaboutme){
       aboutmeTitle.style.transform = "translateX(0)";
     }
-
-    if(aboutmePosition < (-aboutmecontent.offsetHeight/2)){
-      aboutmeTitle.style.transform = "translateX(-100)";
+    if(aboutmePosition < -(aboutmecontent.offsetHeight)){
+      aboutmeTitle.style.transform = "translateX(-100vw)";
     }
-    console.log(aboutmePosition+"-->"+window.innerHeight/1.3);
+
+    if(aboutmePosition > window.innerHeight){
+      aboutmeTitle.style.transform = "translateX(-100vw)";
+    }
+
+    //For Career Section
+    var screenSlidecareer = window.innerHeight/1.5;
+     if(careerPosition < screenSlidecareer){
+       careerTitle.style.transform = "translateX(0)";
+     }
+     if(careerPosition < -(careercontent.offsetHeight)){
+       careerTitle.style.transform = "translateX(-100vw)";
+     }
+      if(careerPosition > window.innerHeight){
+        careerTitle.style.transform = "translateX(-100vw)";
+    }
+
+    //For Contact me Section
+    var screenSlidecontact = window.innerHeight/1.42;
+     if(contactPosition < screenSlidecontact){
+      contactTitle.style.transform = "translateX(0)";
+     }
+     if(contactPosition < -(contactcontent.offsetHeight)){
+      contactTitle.style.transform = "translateX(-100vw)";
+     }
+      if(contactPosition > window.innerHeight){
+        contactTitle.style.transform = "translateX(-100vw)";
+      }
+
+
+
 
   }
   else{
     //For Skill
-    
+
     var screenSlideSkill = window.innerHeight/1.2;
     if(skillLanguagePosition < screenSlideSkill){
       skillLanguage.style.transform = "translateY(0)";
@@ -214,7 +231,7 @@ window.addEventListener('scroll', ()=>{
       skillOther.style.opacity = "0";
     }
 
-     
+
     //For Project
     var screenSlideProj = window.innerHeight/1.3;
     if(proj1Position < screenSlideProj){
@@ -256,53 +273,131 @@ window.addEventListener('scroll', ()=>{
     }
 
     //For About Section
-    var screenSlideaboutme = window.innerHeight/1.1;
+    var screenSlideaboutme = window.innerHeight/1.05;
     if(aboutmePosition < screenSlideaboutme){
       aboutmeTitle.style.transform = "translateX(0)";
     }
 
-    if(aboutmePosition < (-aboutmecontent.offsetHeight/2)){
-      aboutmeTitle.style.transform = "translateX(-100)";
+    if(aboutmePosition < -(aboutmecontent.offsetHeight)){
+      aboutmeTitle.style.transform = "translateX(-100vw)";
     }
-    console.log(aboutmePosition+"-->"+window.innerHeight);
-  } 
+
+    if(aboutmePosition > window.innerHeight){
+      aboutmeTitle.style.transform = "translateX(-100vw)";
+    }
+    
+    //For Career Section
+    var screenSlidecareer = window.innerHeight/1.1;
+     if(careerPosition < screenSlidecareer){
+       careerTitle.style.transform = "translateX(0)";
+     }
+     if(careerPosition < -(careercontent.offsetHeight)){
+       careerTitle.style.transform = "translateX(-100vw)";
+     }
+      if(careerPosition > window.innerHeight){
+        careerTitle.style.transform = "translateX(-100vw)";
+      }
+
+    //For Contact me Section
+    console.log(contactPosition +"-->" + window.innerHeight);
+    var screenSlidecontact = window.innerHeight/1.1;
+     if(contactPosition < screenSlidecontact){
+      contactTitle.style.transform = "translateX(0)";
+     }
+     if(contactPosition < -(contactcontent.offsetHeight)){
+      contactTitle.style.transform = "translateX(-100vw)";
+     }
+      if(contactPosition > window.innerHeight){
+        contactTitle.style.transform = "translateX(-100vw)";
+      }
+  }
 },true);
 
-
-
-
-window.addEventListener('click', function(e){   
+window.addEventListener('click', function(e){
 	if (document.querySelector('.burger').contains(e.target)){
 		nav.classList.toggle('nav-active');
-	} 
+	}
 	else if(document.querySelector('.nav-links').contains(e.target)){
 	}
 	else{
 		nav.classList.remove('nav-active');
 	}
-  });
+});
 
 
-// proj1.addEventListener('mouseover',() =>{
-//   proj1.style.width = "60vw";
-//   proj1.style.width = "20vw";
-//   proj1.style.width = "20vw";
-// });
-// proj1.addEventListener('mouseleave',() =>{
-//   document.querySelector('.grid-container').style.width = "100vw";
-// });
+projGrid1.addEventListener('click', ()=>{
+	projView1.style.display = 'block';
+	projView1.style.opacity = '1';
+  document.body.style.overflow = 'hidden';
+  //disableScroll();
+	projView2.style.display = 'none';
+	projView3.style.display = 'none';
+	projView4.style.display = 'none';
+});
+
+projGrid2.addEventListener('click', ()=>{
+	projView1.style.display = 'none';
+	projView2.style.display = 'block';
+	projView2.style.opacity= '1';
+  document.body.style.overflow = 'hidden';
+  //disableScroll();
+	projView3.style.display = 'none';
+	projView4.style.display = 'none';
+});
+
+projGrid3.addEventListener('click', ()=>{
+	projView1.style.display = 'none';
+	projView2.style.display = 'none';
+	projView3.style.display = 'block';
+	projView3.style.opacity= '1';
+  document.body.style.overflow = 'hidden';
+  //disableScroll();
+	projView4.style.display = 'none';
+});
+
+projGrid4.addEventListener('click', ()=>{
+	projView1.style.display = 'none';
+	projView2.style.display = 'none';
+	projView3.style.display = 'none';
+	projView4.style.display = 'block';
+	projView4.style.opacity= '1';
+  document.body.style.overflow = 'hidden';
+  //disableScroll();
+});
 
 
+window.addEventListener('click', function(e){
+	//console.log(e.target.className);
+	if( projView1.style.display == 'block' || projView2.style.display == 'block' ||
+		projView3.style.display == 'block' || projView4.style.display == 'block'){
 
-//  const navslide = () =>{
-//     const burger = document.querySelector('.burger');
-//     const nav = document.querySelector('.nav-links');
-//     const navLinks = document.querySelectorAll('.nav-links li');
+		for (i = 0; i < sectionVideo.length; i++) {
+			if( sectionVideo[i] == e.target  || e.target.className == 'cross'||
+			   e.target.className == 'cross1'|| e.target.className == 'cross2'){
+        //enableScroll();
+        document.body.style.overflow = '';
+				projView1.style.display = 'none';
+			 	projView2.style.display = 'none';
+			 	projView3.style.display = 'none';
+			 	projView4.style.display = 'none';
+			 	projView1.style.opacity= '0';
+			 	projView2.style.opacity= '0';
+			 	projView3.style.opacity= '0';
+			 	projView4.style.opacity= '0';
+			}
+		}
+	}
 
-//     burger.addEventListener('click',()=>{
-//       nav.classList.toggle('nav-active');
-//     });
-//  }
+});
 
 
-//navslide();
+// function disableScroll(){
+//   var x=window.scrollX;
+//   var y=window.scrollY;
+//   window.onscroll=function(){window.scrollTo(x, y);};
+// }
+
+// function enableScroll(){
+//   window.onscroll=function(){};
+// }
+
