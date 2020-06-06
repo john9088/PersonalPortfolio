@@ -489,6 +489,12 @@ body {
 .cross .cross2{
     transform: translate(0vw, 0vh) rotate(45deg);
 }
+
+.proj-tools-used span{
+    border: 2px solid #fff;
+    border-radius: 10vw;
+    padding: 7px;
+}
 /* SECTION ABOUT ME START */
 
 #aboutme{
