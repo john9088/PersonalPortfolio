@@ -198,6 +198,7 @@
 
     #video section {
         grid-template-columns: auto;
+        grid-template-rows: 40vh 60vh;
         grid-gap: 10px;
         height: 100vh;
     }
@@ -211,15 +212,25 @@
 
     #video section div {
         width: 98vw;
-        height: 40vh;
         justify-self: center;
-        align-self: center;
+        align-self: baseline;
         overflow-y: hidden;
-        margin-top: -15vh;
     }
 
     .cross {
-        top: 15vh;
+        top: 8vh;
+    }
+
+    .proj-tools-used span {
+        margin: 0.25vh 5vw;
+        padding: 3px;
+    }
+    .proj-tools-used{
+        top: 0;
+    }
+    #video section div p{
+        top: 1vh;
+        height: 99vh;
     }
 
     #aboutme{
