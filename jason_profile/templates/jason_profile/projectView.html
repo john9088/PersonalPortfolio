@@ -3,7 +3,7 @@
 <div id="video" class="video1">
 
 	<section>
-	    <video controls>
+	    <video controls muted>
 	        <source src="{% static '/video/Rape_Cases.mp4'%}" type="video/mp4">
 	    </video>  
 	    <div>
@@ -34,19 +34,23 @@
 
 <div id="video" class="video2">
 	<section>
-	    <video controls>
-	        <source src="{% static '/video/proj2.mp4'%}" type="video/mp4">
+	    <video controls muted>
+	        <source src="{% static '/video/Instagram_downloader.mp4'%}" type="video/mp4">
 	    </video>  
-	    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		    proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		    </div>
+		<div>
+			<div class="proj-tools-used">
+				<span>Python</span>
+				<span>Selenium</span>
+			</div>
+			<p>
+				In this project my aim was to automate google crome to download post from Instagram, 
+				for this purpose I used selenium which is a python liberary to automate browser. I made a dummy account "jbot9088" and added its credentials in a .txt file which will be
+				referred to login to instagram.
+				So in the video, initially, the folder is empty, then after executing downloader.py, 
+				the 1st post be it image or video will be downloaded into download folder.				
+			</p>
+			
+	    </div>
 	</section>
 	<span class="cross">
 		<hr class="cross1">
