@@ -415,6 +415,7 @@ body {
 }
 #video section video{
     width: 40vw;
+    /* height: 70vh; */
     background-color: rgba(105,105,105,0.5);
     border-radius: 25px;
     justify-self: center;

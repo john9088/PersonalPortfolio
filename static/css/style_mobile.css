@@ -212,13 +212,18 @@
 
     #video section div {
         width: 98vw;
+        font-size: 2.15vh;
         justify-self: center;
         align-self: baseline;
         overflow-y: hidden;
     }
 
+    .proj-tools-used {
+        margin-top: 2vh;
+    }
+
     .cross {
-        top: 8vh;
+        top: 6vh;
     }
 
     .proj-tools-used span {
@@ -231,6 +236,12 @@
     #video section div p{
         top: 1vh;
         height: 99vh;
+    }
+
+    #video section video {
+        height: 30vh;
+        background-color: none;
+
     }
 
     #aboutme{
