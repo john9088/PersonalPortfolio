@@ -151,6 +151,8 @@
     .project-content{
         grid-template-columns: auto;
         grid-template-rows: auto;
+        padding: 0;
+        grid-gap: 3.5vw;
     }
 
     .project-container {
@@ -236,6 +238,11 @@
     #video section div p{
         top: 1vh;
         height: 99vh;
+        font-size: 2vh;
+    }
+
+    .cross hr {
+        width: 6vw;
     }
 
     #video section video {

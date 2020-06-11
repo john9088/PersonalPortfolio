@@ -299,7 +299,7 @@ window.addEventListener('scroll', ()=>{
       }
 
     //For Contact me Section
-    console.log(contactPosition +"-->" + window.innerHeight);
+    //console.log(contactPosition +"-->" + window.innerHeight);
     var screenSlidecontact = window.innerHeight/1.1;
      if(contactPosition < screenSlidecontact){
       contactTitle.style.transform = "translateX(0)";
