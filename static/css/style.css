@@ -313,8 +313,8 @@ body {
     width: 70%;
     height: 100%;
     display: grid;
-    padding: 10px;
-    grid-gap: 15px;
+    padding: 2.5vw;
+    grid-gap: 0.5vw;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
     overflow-x: hidden;
@@ -458,9 +458,9 @@ body {
 }
   
 .cross hr{
-    width: 25px;
-    height: 2px;
-    color: red;
+    width: 2vw;
+    height: 0.3vh;
+    background: oldlace;
     cursor: pointer;
 }
   
@@ -475,6 +475,7 @@ body {
     position: relative;
     display: grid;
     top: 30vh;
+    font-size: 1vw;
     grid-template-columns: auto auto;
 }
 .proj-tools-used span{
@@ -492,6 +493,7 @@ body {
 #video section div p{
     position: relative;
     top: 35vh;
+    font-size: 1.5vw;
 }
 /* SECTION ABOUT ME START */
 
