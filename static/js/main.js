@@ -390,7 +390,22 @@ window.addEventListener('click', function(e){
 
 });
 
-
+window.onhashchange = function() {
+  if( projView1.style.display == 'block' || projView2.style.display == 'block' ||
+      projView3.style.display == 'block' || projView4.style.display == 'block'){
+          //var curpage = window.location.href;
+          //window.location.href = curpage.split('#')[0]+"#projects/";
+          window.history.go(0);
+          projView1.style.display = 'none';
+          projView2.style.display = 'none';
+          projView3.style.display = 'none';
+          projView4.style.display = 'none';
+          document.body.style.overflow = '';
+          
+          //window.location.href = curpage.split('#')[0]+"#projects";
+          console.log(curpage.split('#')[0]+"#projects");
+      } 
+    }
 // function disableScroll(){
 //   var x=window.scrollX;
 //   var y=window.scrollY;
