@@ -61,3 +61,38 @@
 //navslide();
 
 
+
+// alert(window.history.length);
+// if( window.history.length == 1 && window.location.href.indexOf("#") == -1){
+//       window.location.href = curpage + "#home";
+//       alert(window.location.href);
+//       window.location.reload();
+//       window.location.href = curpage.split('#')[0];
+//       alert(window.location.href);
+//       window.location.reload();
+// }
+
+// window.onhashchange = function() {
+//   if( projView1.style.display == "block" || projView2.style.display == "block"||
+//       projView3.style.display == "block" || projView4.style.display == "block"){
+          
+//           //(curpage);
+
+//           if(window.location.href.indexOf("#") > -1){
+//             window.location.href = curpage.split('#')[0]+"#projects";
+//           }
+//           else{
+//             window.location.href = curpage + "#projects";
+//           }
+//           window.location.reload();
+//           //window.history.go();
+//           projView1.style.display = 'none';
+//           projView2.style.display = 'none';
+//           projView3.style.display = 'none';
+//           projView4.style.display = 'none';
+//           document.body.style.overflow = '';
+          
+//           //window.location.href = curpage.split('#')[0]+"#projects";
+//           //console.log(curpage.split('#')[0]+"#projects");
+//       } 
+// }

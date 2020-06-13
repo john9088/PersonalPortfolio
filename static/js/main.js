@@ -13,7 +13,7 @@ const rightArrow = document.querySelector('.right');
 const selectedParent = document.querySelector('.controls ul');
 var index = 0;
 
-
+var curpage = window.location.href;
 var projView1 = document.querySelector('.video1');
 var projView2 = document.querySelector('.video2');
 var projView3 = document.querySelector('.video3');
@@ -23,6 +23,7 @@ var projGrid1 = document.getElementById('viewProj1');
 var projGrid2 = document.getElementById('viewProj2');
 var projGrid3 = document.getElementById('viewProj3');
 var projGrid4 = document.getElementById('viewProj4');
+var popUp = document.querySelectorAll('.pop-up');
 
 //TO HIDE INTRO
 window.addEventListener('scroll', ()=>{
@@ -332,7 +333,15 @@ projGrid1.addEventListener('click', ()=>{
   //disableScroll();
 	projView2.style.display = 'none';
 	projView3.style.display = 'none';
-	projView4.style.display = 'none';
+  projView4.style.display = 'none';
+
+  if( window.history.length == 1){
+    popUp[0].style.transform = 'translate(-50%, 0) translateY(1vh)';
+  }
+  else{
+    
+    popUp[0].style.transform = 'translatey(-30vh)';
+  }
 });
 
 projGrid2.addEventListener('click', ()=>{
@@ -342,7 +351,15 @@ projGrid2.addEventListener('click', ()=>{
   document.body.style.overflow = 'hidden';
   //disableScroll();
 	projView3.style.display = 'none';
-	projView4.style.display = 'none';
+  projView4.style.display = 'none';
+
+  if( window.history.length == 1){
+    
+    popUp[1].style.transform = 'translate(-50%, 0) translateY(1vh)';
+  }
+  else{
+    popUp[1].style.transform = 'translatey(-30vh)';
+  }
 });
 
 projGrid3.addEventListener('click', ()=>{
@@ -352,7 +369,13 @@ projGrid3.addEventListener('click', ()=>{
 	projView3.style.opacity= '1';
   document.body.style.overflow = 'hidden';
   //disableScroll();
-	projView4.style.display = 'none';
+  projView4.style.display = 'none';
+  if( window.history.length == 1){
+    popUp[2].style.transform = 'translate(-50%, 0) translateY(1vh)';
+  }
+  else{
+    popUp[2].style.transform = 'translatey(-30vh)';
+  }
 });
 
 projGrid4.addEventListener('click', ()=>{
@@ -362,6 +385,13 @@ projGrid4.addEventListener('click', ()=>{
 	projView4.style.display = 'block';
 	projView4.style.opacity= '1';
   document.body.style.overflow = 'hidden';
+
+  if( window.history.length == 1){
+    popUp[3].style.transform = 'translate(-50%, 0) translateY(1vh)';
+  }
+  else{
+    popUp[3].style.transform = 'translatey(-30vh)';
+  }
   //disableScroll();
 });
 
@@ -391,28 +421,21 @@ window.addEventListener('click', function(e){
 });
 
 window.onhashchange = function() {
-  if( projView1.style.display == 'block' || projView2.style.display == 'block' ||
-      projView3.style.display == 'block' || projView4.style.display == 'block'){
-          //var curpage = window.location.href;
-          //window.location.href = curpage.split('#')[0]+"#projects/";
-          window.history.go(0);
-          projView1.style.display = 'none';
-          projView2.style.display = 'none';
-          projView3.style.display = 'none';
-          projView4.style.display = 'none';
-          document.body.style.overflow = '';
-          
-          //window.location.href = curpage.split('#')[0]+"#projects";
-          console.log(curpage.split('#')[0]+"#projects");
-      } 
-    }
-// function disableScroll(){
-//   var x=window.scrollX;
-//   var y=window.scrollY;
-//   window.onscroll=function(){window.scrollTo(x, y);};
-// }
-
-// function enableScroll(){
-//   window.onscroll=function(){};
-// }
-
+     if( projView1.style.display == "block" || projView2.style.display == "block"||
+         projView3.style.display == "block" || projView4.style.display == "block"){
+  
+             if(window.location.href.indexOf("#") > -1){
+               window.location.href = curpage.split('#')[0]+"#projects";
+             }
+             else{
+               window.location.href = curpage + "#projects";
+             }
+             window.location.reload();
+             projView1.style.display = 'none';
+             projView2.style.display = 'none';
+             projView3.style.display = 'none';
+             projView4.style.display = 'none';
+             document.body.style.overflow = '';
+           
+         } 
+   }

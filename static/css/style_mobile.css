@@ -232,6 +232,17 @@
         top: 6vh;
     }
 
+    .pop-up{
+        position: absolute;
+        background-color:rgba(225,225,255,0.5);   
+        display:block;
+        left: 50%;
+        padding: 10px;
+        border-radius:25px;
+        transform: translate(-50%, 0) translateY(-50px);
+        transition: 1s all ease-in-out;
+      }
+
     .proj-tools-used span {
         margin: 0.25vh 5vw;
         padding: 3px;
@@ -358,6 +369,9 @@
         font-size: 10vw;
     }
 
+    .timeline ul li p {
+       font-size: 2vh;
+    }
     #contact{
         flex-direction: column;
     }
