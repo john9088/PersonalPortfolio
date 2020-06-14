@@ -343,6 +343,8 @@
         top: -6vh;
     }
 
+
+
     #career{
         flex-direction: column;
     }
@@ -361,7 +363,8 @@
     
     .career-card{
         /* background-color: #1f1f1f; */
-        width:100%;
+        margin: 0 5vw;
+        width:90%;
     }
 
     .career-left h1 {
@@ -372,6 +375,47 @@
     .timeline ul li p {
        font-size: 2vh;
     }
+
+    .timeline ul{
+		display: block;
+  	}
+	.timeline::before{
+		left:35px;
+	}
+	.timeline ul li:nth-child(even),
+	.timeline ul li:nth-child(odd){
+		width: 100%;
+		text-align: left;
+		padding-left: 50px;
+		padding-bottom: 50px;
+	}
+	.timeline ul li:nth-child(odd):before,
+	.timeline ul li:nth-child(even):before{
+		top: 50px;
+        left: 35px;
+	}
+		
+	.timeline ul li:nth-child(odd) .time,
+	.timeline ul li:nth-child(even) .time{
+        top: 35px;
+		left: 50px;
+		right: inherit;
+    }
+    .timeline ul li .time h4 {
+        font-size: 1.25vh;
+    }
+
+    .timeline ul li h3 {
+        font-size: 1.65vh;
+    }
+
+    .content {
+        padding-bottom: 20px;
+        margin-top: 45px;
+    }
+
+
+
     #contact{
         flex-direction: column;
     }
@@ -402,6 +446,8 @@
 
     .contactme-container {
         padding: 0;
+        width: 95%;
+        margin-left: 5%;
     }
 
     .contact-left h1 {
@@ -530,15 +576,13 @@
     }
 } */
 
-@media (max-width: 650px){
-	.timeline{
-		margin-top: 50px;
-	}
-	.timeline ul{
+@media (orientation: portrait),(max-width: 650px){
+
+	/* .timeline ul{
 		display: block;
   	}
 	.timeline::before{
-		left:20px;
+		left:35px;
 	}
 	.timeline ul li:nth-child(even),
 	.timeline ul li:nth-child(odd){
@@ -549,14 +593,26 @@
 	}
 	.timeline ul li:nth-child(odd):before,
 	.timeline ul li:nth-child(even):before{
-		top: -10px;
-		left: 16px;
+		top: 50px;
+        left: 35px;
 	}
 		
 	.timeline ul li:nth-child(odd) .time,
 	.timeline ul li:nth-child(even) .time{
-		top: -23px;
+        top: 35px;
 		left: 50px;
 		right: inherit;
-	}
+    }
+    .timeline ul li .time h4 {
+        font-size: 1.25vh;
+    }
+
+    .timeline ul li h3 {
+        font-size: 1.65vh;
+    }
+
+    .content {
+        padding-bottom: 20px;
+        margin-top: 45px;
+    } */
 }

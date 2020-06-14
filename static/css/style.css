@@ -589,7 +589,7 @@ body {
     height: auto;
     /* background: linear-gradient(90deg,  #7A7A7A 0%,#7A7A7A 30%,#8F8F8F 30%,#8F8F8F 100%); */
     overflow-x: hidden;
-    overflow-y: visible;
+    overflow-y: hidden;
 }
 
 
@@ -623,8 +623,9 @@ body {
     position: relative;
     border: solid 2px  #c5c5c5;
     border-radius: 20px;
+    margin: 0 1vw;
     width:70%;
-    height: 100%;
+    height: auto;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
@@ -670,7 +671,15 @@ body {
 	position: absolute;
 	left: 50%;
 	width: 2px;
-	height:100%;
+	height: 100%;
+	background: #c5c5c5;
+}
+.timeline:after{
+	content: '';
+	position: absolute;
+	left: 50%;
+	width: 2px;
+	height: 100%;
 	background: #c5c5c5;
 }
 
@@ -689,7 +698,7 @@ body {
 	list-style: none;
 	position: relative;
 	width: 50%;
-	padding: 20px 40px;
+	padding: 3.5vh 2vw;
 }
 
 .timeline ul li:nth-child(odd){
@@ -713,10 +722,10 @@ body {
 .timeline ul li:nth-child(odd):before{
 	content: '';
 	position: absolute;
-	top: 24px;
-	right: -6px;
-	width: 10px;
-	height: 10px;
+	top: 5vh;
+	right: -1%;
+    width: 0.6vw;
+    height: 0.6vw;
 	background: #E9322E;
 	border-radius: 50%;
 	box-shadow: 0 0 0 3px rgba(233,33,99,0.3);
@@ -726,10 +735,10 @@ body {
 .timeline ul li:nth-child(even):before{
 	content: '';
 	position: absolute;
-	top: 24px;
-	left: -4px;
-	width: 10px;
-	height: 10px;
+	top: 5vh;
+	left: -0.7%;
+    width: 0.6vw;
+    height: 0.6vw;
 	background: #E9322E;
 	border-radius: 50%;
 	box-shadow: 0 0 0 3px rgba(233,33,99,0.3);
@@ -737,6 +746,7 @@ body {
 }
 
 .timeline ul li h3{
+    font-size: 1.65vw;
 	font-weight: 600;
 	color: #E9322E;
 }
@@ -745,36 +755,36 @@ body {
 	color: #c5c5c5;
     margin: 10px 0 0;
     padding: 0;
-    font-size: 1.25vw;
+    font-size: 1.5vw;
 }
 
 .timeline ul li .time h4{
 	margin: 0;
 	padding:0;
-	font-size: 14px;
+	font-size: 1.25vw;
 }
 
 .timeline ul li:nth-child(odd) .time{
 	position: absolute;
-	top: 12px;
-	right: -244px;
+	top: 3.5vh;
+	right: -22vw;
 	margin: 0;
 	padding: 8px 16px;
 	background: #E9322E;
 	color:#fff;
-	border-radius: 18px;
+	border-radius: 2vw;
 	box-shadow: 0 0 0 3px rgba(233,33,99,0.3);
 }
 
 .timeline ul li:nth-child(even) .time{
 	position: absolute;
-	top: 14px;
-	left: -200px;
+	top: 3.5vh;
+	left: -18vw;
 	margin: 0;
 	padding: 8px 16px;
 	background: #E9322E;
 	color:#fff;
-	border-radius: 18px;
+	border-radius: 2vw;
 	box-shadow: 0 0 0 3px rgba(233,33,99,0.3);
 }
 
@@ -882,8 +892,9 @@ body {
     display: flex;
     width: 100%;
     min-height: 100vh;
-    /* background: linear-gradient(90deg,  #FF8533 0%,#FF8533 30%,#FFD6BA 30%,#FFD6BA 100%); */
+    margin: 0 auto;
     height: auto;
+    /* background: linear-gradient(90deg,  #7A7A7A 0%,#7A7A7A 30%,#8F8F8F 30%,#8F8F8F 100%); */
     overflow-x: hidden;
     overflow-y: visible;
 }
@@ -893,7 +904,7 @@ body {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    height: 100vh;
+    height: auto;
 }
 
 
@@ -923,7 +934,8 @@ body {
 
 .contactme-container{
     position: relative;
-	width: 100%;
+    width: 100%;
+    height: 100%;
 	padding: 20px;
 }		
 
@@ -968,7 +980,7 @@ body {
 	box-shadow: none;
 	outline: none;
 	border: none;
-	font-size: 1vw;
+	font-size: 1.75vw;
 	padding: 0 10px;
 	z-index: 1;
 	color: #000;
