@@ -421,12 +421,12 @@ window.addEventListener('click', function(e){
 
 });
 
-// window.addEventListener("resize", function(e){
-//   //alert(initialHeight);
-//   document.documentElement.style.setProperty('overflow', 'auto');
-//   const metaViewport = document.querySelector('meta[name=viewport]');
-//   metaViewport.setAttribute('content', 'height=' + initialHeight + 'px, width=device-width, initial-scale=1.0');
-// });
+window.addEventListener("resize", function(e){
+   //alert(initialHeight);
+   document.documentElement.style.setProperty('overflow', 'auto');
+   const metaViewport = document.querySelector('meta[name=viewport]');
+   metaViewport.setAttribute('content', 'height=' + initialHeight + 'px, width=device-width, initial-scale=1.0');
+});
 
 window.onhashchange = function() {
      if( projView1.style.display == "block" || projView2.style.display == "block"||
