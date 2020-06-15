@@ -4,7 +4,7 @@
     }
 }
 
-@media screen and (orientation: portrait) , (max-width:480px){
+@media screen and (orientation: portrait) , (max-width:550px){
     body{
         overflow-x: hidden;
         /* background: #1b1b1e; */
@@ -86,13 +86,14 @@
     }
 
     .land_img{
-        width:40vh;
+        width:35vh;
         height: auto;
     }
     .hero-content{
         position: relative;
         top: -4vh;
         left: 38%;
+        margin:0;
         text-align: left;
         font-family: 'DM Sans', sans-serif;
         color: black;
@@ -100,7 +101,7 @@
     }
     #home h1{
         color:black ;
-        margin-top: -2vh;
+        margin-top: 3vh;
         font-size: 5vh;
     }
 
@@ -121,9 +122,9 @@
         position: absolute;
         display: flex;
         flex-direction: column;
-        top: 5vh;
-        left: -50%;
-        width: auto;
+        top: 8vh;
+        left: -55%;
+        width: 50%;
         justify-content: space-between;
     }
     
@@ -154,7 +155,6 @@
 
     .project-content{
         grid-template-columns: auto;
-        grid-template-rows: auto;
         padding: 0;
         grid-gap: 3.5vw;
     }
@@ -202,10 +202,14 @@
         background-color: #555;
     }
 
+    .button-container-project {
+        top: 3vh;
+    }
+
     #video section {
         grid-template-columns: auto;
-        grid-template-rows: 40vh 60vh;
-        grid-gap: 10px;
+        grid-template-rows: 30vh 70vh;
+        /* grid-gap: 10px; */
         height: 100vh;
     }
 
@@ -213,7 +217,7 @@
         width: 98vw;
         justify-self: center;
         align-self:center ;
-        margin-top: 10vh;
+        margin-top: 4vh;
     }
 
     #video section div {
@@ -224,12 +228,17 @@
         overflow-y: hidden;
     }
 
-    .proj-tools-used {
+    /* .proj-tools-used {
         margin-top: 2vh;
+    } */
+
+    .label-up {
+        
+        margin: 0px 4vw;
     }
 
     .cross {
-        top: 6vh;
+        top: 77vh;
     }
 
     .pop-up{
@@ -253,7 +262,7 @@
     #video section div p{
         top: 1vh;
         height: 99vh;
-        font-size: 2vh;
+        font-size: 1.65vh;
     }
 
     .cross hr {
@@ -402,11 +411,11 @@
 		right: inherit;
     }
     .timeline ul li .time h4 {
-        font-size: 1.25vh;
+        font-size: 1.45vh;
     }
 
     .timeline ul li h3 {
-        font-size: 1.65vh;
+        font-size: 2.2vh;
     }
 
     .content {

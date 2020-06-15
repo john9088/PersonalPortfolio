@@ -8,7 +8,8 @@ const proj3 = document.querySelector('.proj3');
 
 const slider = document.querySelector('.slider');
 const initialHeight = screen.height;
-
+const metaViewport = document.querySelector('meta[name=viewport]');
+metaViewport.setAttribute('content', 'width=device-width ,height=' + initialHeight + 'px,initial-scale=1, minimum-scale=1, maximum-scale=1');
 const leftArrow = document.querySelector('.left');
 const rightArrow = document.querySelector('.right');
 const selectedParent = document.querySelector('.controls ul');
@@ -175,6 +176,7 @@ window.addEventListener('scroll', ()=>{
     var screenSlidecontact = window.innerHeight/1.42;
      if(contactPosition < screenSlidecontact){
       contactTitle.style.transform = "translateX(0)";
+
      }
      if(contactPosition < -(contactcontent.offsetHeight)){
       contactTitle.style.transform = "translateX(-100vw)";
@@ -420,13 +422,33 @@ window.addEventListener('click', function(e){
 	}
 
 });
+//const metaViewport = document.querySelector('meta[name=viewport]');
+console.log(metaViewport.content);
 
-window.addEventListener("resize", function(e){
-   //alert(initialHeight);
-   document.documentElement.style.setProperty('overflow', 'auto');
-   const metaViewport = document.querySelector('meta[name=viewport]');
-   metaViewport.setAttribute('content', 'height=' + initialHeight + 'px, width=device-width, initial-scale=1.0');
-});
+//const temp = 'height=' + initialHeight + 'px';
+
+//window.addEventListener("resize", function(e){
+  //alert("Resize");
+  //document.documentElement.style.setProperty('overflow', 'auto');
+  //const metaViewport = document.querySelector('meta[name=viewport]');
+  //if(!metaViewport.content.includes(temp))
+    //metaViewport.setAttribute('content', 'width=device-width ,height=' + initialHeight + 'px,initial-scale=1, minimum-scale=1, maximum-scale=1');
+  //else
+  //  metaViewport.setAttribute('content', 'width=device-width ,initial-scale=1, minimum-scale=1, maximum-scale=1');
+
+//});
+
+//window.addEventListener("resize", function(e){
+  //const metaViewport = document.querySelector('meta[name=viewport]');
+//  metaViewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0');
+//});
+
+// window.addEventListener("resize", function(e){
+//    //alert(initialHeight);
+//    document.documentElement.style.setProperty('overflow', 'auto');
+//    const metaViewport = document.querySelector('meta[name=viewport]');
+//    metaViewport.setAttribute('content', 'height=' + initialHeight + 'px, width=device-width, initial-scale=1.0');
+// });
 
 window.onhashchange = function() {
      if( projView1.style.display == "block" || projView2.style.display == "block"||

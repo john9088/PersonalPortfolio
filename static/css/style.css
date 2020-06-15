@@ -196,7 +196,8 @@ body {
 
 .hero-content{
     position: relative;
-    top: 10vh;
+    margin: 5vh 0 1vh 1vw;
+    /* top: 10vh; */
     /* left: -9.5%; */
     text-align: left;
     font-family: 'DM Sans', sans-serif;
@@ -318,7 +319,7 @@ body {
     height: 100%;
     display: grid;
     padding: 2.5vw;
-    grid-gap: 0.5vw;
+    grid-gap: 1vw;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
     overflow-x: hidden;
@@ -746,7 +747,7 @@ body {
 }
 
 .timeline ul li h3{
-    font-size: 1.65vw;
+    font-size: 1.60vw;
 	font-weight: 600;
 	color: #E9322E;
 }
@@ -755,6 +756,7 @@ body {
 	color: #c5c5c5;
     margin: 10px 0 0;
     padding: 0;
+    line-height: 4vh;
     font-size: 1.5vw;
 }
 
