@@ -339,11 +339,16 @@ projGrid1.addEventListener('click', ()=>{
   projView4.style.display = 'none';
 
   if( window.history.length == 1){
-    popUp[0].style.transform = 'translate(-50%, 0) translateY(1vh)';
+    setTimeout(function() {
+      showPop(popUp[0]);
+    }, 500);
+
+    setTimeout(function() {
+      hidePop(popUp[0]);
+    }, 4000);
   }
-  else{
-    
-    popUp[0].style.transform = 'translatey(-30vh)';
+  else{   
+    popUp[0].style.opacity = '0';
   }
 });
 
@@ -406,7 +411,7 @@ window.addEventListener('click', function(e){
 
 		for (i = 0; i < sectionVideo.length; i++) {
 			if( sectionVideo[i] == e.target  || e.target.className == 'cross'||
-			   e.target.className == 'cross1'|| e.target.className == 'cross2'){
+			   e.target.className == 'go-back-p'|| e.target.className == 'go-back-img'){
         //enableScroll();
         document.body.style.overflow = '';
 				projView1.style.display = 'none';
@@ -422,8 +427,15 @@ window.addEventListener('click', function(e){
 	}
 
 });
+
+function showPop(popUp){
+  popUp.style.opacity = "1";
+}
+
+function hidePop(popUp){
+  popUp.style.opacity = "0";
+}
 //const metaViewport = document.querySelector('meta[name=viewport]');
-console.log(metaViewport.content);
 
 //const temp = 'height=' + initialHeight + 'px';
 
@@ -438,17 +450,6 @@ console.log(metaViewport.content);
 
 //});
 
-//window.addEventListener("resize", function(e){
-  //const metaViewport = document.querySelector('meta[name=viewport]');
-//  metaViewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0');
-//});
-
-// window.addEventListener("resize", function(e){
-//    //alert(initialHeight);
-//    document.documentElement.style.setProperty('overflow', 'auto');
-//    const metaViewport = document.querySelector('meta[name=viewport]');
-//    metaViewport.setAttribute('content', 'height=' + initialHeight + 'px, width=device-width, initial-scale=1.0');
-// });
 
 window.onhashchange = function() {
      if( projView1.style.display == "block" || projView2.style.display == "block"||

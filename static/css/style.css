@@ -455,11 +455,31 @@ body {
   
 .cross{
     position: absolute;
-    width: auto;
+    width: 10%;
     height: auto;
+    background-color: rgba(149, 151, 148,0.3);
+    display: flex;
+    /* padding: 1px; */
     top: 20vh;
-    left: 88vw;
+    align-content: center;
+    justify-content: center;
+    border-radius: 20vw;
+    left: 85vw;
     cursor: pointer;
+}
+
+
+.cross img{
+    width: 15%;
+    align-self: center;
+}
+
+.cross p{
+    font-size: 1.2vw;
+    width: 50%;
+    color: #c5c5c5;
+    align-self: center;
+    margin-left: 5%;
 }
   
 .cross hr{

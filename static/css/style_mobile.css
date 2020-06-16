@@ -81,6 +81,8 @@
     #intro{
         padding: 0;
         display: flex;
+        margin-top: -18%;
+        height: 57vh;
         flex-direction: column;
         opacity: 1;
     }
@@ -222,7 +224,7 @@
 
     #video section div {
         width: 98vw;
-        font-size: 2.15vh;
+        font-size: 1.5vh;
         justify-self: center;
         align-self: baseline;
         overflow-y: hidden;
@@ -237,19 +239,35 @@
         margin: 0px 4vw;
     }
 
-    .cross {
-        top: 77vh;
+    .cross{
+        top: 73vh;  
+        left: 62vw;
+        width: 35%;
+        box-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
     }
-
+    
+    
+    .cross img{
+        width: 22%;
+        align-self: center;
+    }
+    
+    .cross p{
+        font-size: 4vw;
+    }
+    
     .pop-up{
         position: absolute;
-        background-color:rgba(225,225,255,0.5);   
-        display:block;
+        background-color: rgba(233, 50, 46,0.8);
+        display: block;
+        z-index: 10;
+        top: 5%;
         left: 50%;
+        opacity: 0;
         padding: 10px;
-        border-radius:25px;
-        transform: translate(-50%, 0) translateY(-50px);
-        transition: 1s all ease-in-out;
+        border-radius: 25px;
+        transform: translate(-50%, 0);
+        transition : 1s all ease-in-out;
       }
 
     .proj-tools-used span {
@@ -265,9 +283,9 @@
         font-size: 1.65vh;
     }
 
-    .cross hr {
+    /* .cross hr {
         width: 6vw;
-    }
+    } */
 
     #video section video {
         height: 30vh;
@@ -475,7 +493,7 @@
 
     .contactme-container .row100 .inputbox input, 
     .intextarea{
-	font-size: 1vh;
+	font-size: 2vh;
     }
 
     .contactme-container .row100 {
@@ -491,6 +509,12 @@
         margin: 0;
         margin-top: 4vh;
         margin-left: 5vw;
+    }
+
+    input[type="submit"] {
+       
+        padding: 7px 30px;
+        font-size: 2.2vh;
     }
 }   
 
