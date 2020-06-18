@@ -6,6 +6,8 @@ const proj1 = document.querySelector('.proj1');
 const proj2 = document.querySelector('.proj2');
 const proj3 = document.querySelector('.proj3');
 
+var bodyTag = document.getElementsByTagName("BODY")[0]
+
 const slider = document.querySelector('.slider');
 const initialHeight = screen.height;
 const metaViewport = document.querySelector('meta[name=viewport]');
@@ -26,6 +28,8 @@ var projGrid2 = document.getElementById('viewProj2');
 var projGrid3 = document.getElementById('viewProj3');
 var projGrid4 = document.getElementById('viewProj4');
 var popUp = document.querySelectorAll('.pop-up');
+
+// var promise = document.querySelector('video-proj1').play();
 
 //TO HIDE INTRO
 window.addEventListener('scroll', ()=>{
@@ -435,20 +439,33 @@ function showPop(popUp){
 function hidePop(popUp){
   popUp.style.opacity = "0";
 }
-//const metaViewport = document.querySelector('meta[name=viewport]');
+//Smooth Scroll for IOS
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $('a, button').on('click', function(event) {
 
-//const temp = 'height=' + initialHeight + 'px';
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
 
-//window.addEventListener("resize", function(e){
-  //alert("Resize");
-  //document.documentElement.style.setProperty('overflow', 'auto');
-  //const metaViewport = document.querySelector('meta[name=viewport]');
-  //if(!metaViewport.content.includes(temp))
-    //metaViewport.setAttribute('content', 'width=device-width ,height=' + initialHeight + 'px,initial-scale=1, minimum-scale=1, maximum-scale=1');
-  //else
-  //  metaViewport.setAttribute('content', 'width=device-width ,initial-scale=1, minimum-scale=1, maximum-scale=1');
+      // Store hash
+      var hash = this.hash;
 
-//});
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+
+
 
 
 window.onhashchange = function() {

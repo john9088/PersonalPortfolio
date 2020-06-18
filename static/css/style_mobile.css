@@ -4,7 +4,7 @@
     }
 }
 
-@media screen and (orientation: portrait) , (max-width:550px){
+@media screen and (orientation: portrait) /* , (max-width:550px)*/{ 
     body{
         overflow-x: hidden;
         /* background: #1b1b1e; */
@@ -28,6 +28,7 @@
         right: 0px;
         top:0;
         height: 100vh;
+        height: -webkit-fill-available;
         width: 38%;
         display: flex;
         flex-direction: column;
@@ -82,13 +83,13 @@
         padding: 0;
         display: flex;
         margin-top: -18%;
-        height: 57vh;
+        height: auto;
         flex-direction: column;
         opacity: 1;
     }
 
     .land_img{
-        width:35vh;
+        width: 35vh;
         height: auto;
     }
     .hero-content{
@@ -103,13 +104,13 @@
     }
     #home h1{
         color:black ;
-        margin-top: 3vh;
+        margin-top: 3.5vh;
         font-size: 5vh;
     }
 
     #home h5{
         margin: 0;
-        font-size: 2vh;
+        font-size: 1.5vh;
         width: 100%;
         /* color: #4E4E50; */
     }
@@ -117,6 +118,7 @@
     #home p{
         margin: 0;
         font-size: 1vh;
+        width: 70%;
         padding-bottom: 8px;
     }
 
@@ -150,7 +152,6 @@
     }
 
     #projects{
-        overflow-y: visible;
         flex-direction: column;
         background: none;
     }

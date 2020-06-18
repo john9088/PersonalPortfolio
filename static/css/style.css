@@ -2,8 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
-}
+    /* scroll-behavior: smooth;*/
+} 
 
 body {
     font-family:'DM Sans', sans-serif ;
@@ -285,7 +285,7 @@ body {
     /* background: #fff; */
     /* background: linear-gradient(90deg,  #38040e 0%,#38040e 30%,#250902 30%,#250902 100%); */
     overflow-x: hidden;
-    overflow-y: visible;
+    /* overflow-y: hidden; */
 }
  
 .project-container{
@@ -365,7 +365,7 @@ body {
     background-color: rgba(0,0,0,0.3);
     text-align: center;
     color: white;
-    border-radius: 2px;
+    border-radius: 20px;
     transition: 0.5s;
 }
 
