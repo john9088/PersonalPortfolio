@@ -163,6 +163,7 @@ body {
 /* FOR HOME SECTION */
 .land_img{
     width:20vw;
+    border-radius: 1.5vw 0 0 1.5vw;
     height: auto;
 }
 
@@ -187,7 +188,9 @@ body {
     height: fit-content;
     display: flex;
     margin-bottom:50px;
-    box-shadow: 20px 20px 40px;
+    border-radius: 1.5vw;
+    box-shadow: 0 0 15px #E9322E, 0 0 5px #0000FF;
+    /* box-shadow: 20px 20px 40px; */
     /* background: rgb(68, 67, 67); */
     background: #959794;
     opacity: 1;
@@ -266,6 +269,15 @@ body {
 
   .button2 {
     margin-left: 2vw;
+    
+    /* margin-top: 10px; */
+    /* margin-left: 0vw; */
+    
+  }
+
+  .button2 a{
+    color: #000; 
+    text-decoration: none;
   }
 
   .button2:hover {
