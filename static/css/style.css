@@ -1011,7 +1011,8 @@ body {
 	width: 100%;
 	height: 100%;
 	background: transparent;
-	box-shadow: none;
+    box-shadow: none;
+    white-space: pre-wrap;
 	outline: none;
 	border: none;
 	font-size: 1.75vw;
@@ -1083,6 +1084,12 @@ body {
 .contactme-container .row100 .inputbox textarea:valid ~ .line{
 	height: 100%;
 }
+
+#mobile-number::-webkit-outer-spin-button,
+#mobile-number::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
 
 input[type="submit"]{
 	border: none;

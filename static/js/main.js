@@ -322,7 +322,23 @@ window.addEventListener('scroll', ()=>{
 },true);
 
 window.addEventListener('click', function(e){
-	if (document.querySelector('.burger').contains(e.target)){
+  if(this.document.getElementById('send-email').contains(e.target)){
+    var firstName = document.getElementById('first-name').value,
+        lastName  = this.document.getElementById('last-name').value,
+        subject = this.document.getElementById('subject').value;
+        mobileNumber  = this.document.getElementById('mobile-number').value,
+        message  = this.document.getElementById('message').value;
+
+  if(/\r|\n/.exec(message)) 
+    message = message.replace(/\r|\n/g, "%0D%0A");
+
+    var bodyData = message+'%0D%0A%0D%0A'+firstName+' '+lastName+'%0D%0APh No:'+mobileNumber;
+    
+    window.open('mailto:kevdev9088@gmail.com?subject='+subject +'&body='+ bodyData);
+
+  }
+  
+  if (document.querySelector('.burger').contains(e.target)){
 		nav.classList.toggle('nav-active');
 	}
 	else if(document.querySelector('.nav-links').contains(e.target)){
@@ -464,26 +480,30 @@ $(document).ready(function(){
     } // End if
   });
 });
-
-
-
-
+// TO dynamically increase the height of text area
+textarea = document.querySelector("#message");
+textarea.addEventListener('input', autoResize, false); 
+      
+function autoResize() { 
+    this.style.height = 'auto'; 
+    this.style.height = this.scrollHeight + 'px'; 
+} 
 window.onhashchange = function() {
-     if( projView1.style.display == "block" || projView2.style.display == "block"||
-         projView3.style.display == "block" || projView4.style.display == "block"){
-  
-             if(window.location.href.indexOf("#") > -1){
-               window.location.href = curpage.split('#')[0]+"#projects";
-             }
-             else{
-               window.location.href = curpage + "#projects";
-             }
-             window.location.reload();
-             projView1.style.display = 'none';
-             projView2.style.display = 'none';
-             projView3.style.display = 'none';
-             projView4.style.display = 'none';
-             document.body.style.overflow = '';
-           
-         } 
-   }
+  if( projView1.style.display == "block" || projView2.style.display == "block"||
+      projView3.style.display == "block" || projView4.style.display == "block"){
+
+          if(window.location.href.indexOf("#") > -1){
+            window.location.href = curpage.split('#')[0]+"#projects";
+          }
+          else{
+            window.location.href = curpage + "#projects";
+          }
+          window.location.reload();
+          projView1.style.display = 'none';
+          projView2.style.display = 'none';
+          projView3.style.display = 'none';
+          projView4.style.display = 'none';
+          document.body.style.overflow = '';
+        
+  } 
+}
