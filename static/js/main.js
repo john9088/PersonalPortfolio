@@ -363,11 +363,11 @@ projGrid1.addEventListener('click', ()=>{
   if( window.history.length == 1){
     setTimeout(function() {
       showPop(popUp[0]);
-    }, 500);
+    }, 100);
 
     setTimeout(function() {
       hidePop(popUp[0]);
-    }, 4000);
+    }, 5000);
   }
   else{   
     popUp[0].style.opacity = '0';
@@ -384,11 +384,16 @@ projGrid2.addEventListener('click', ()=>{
   projView4.style.display = 'none';
 
   if( window.history.length == 1){
-    
-    popUp[1].style.transform = 'translate(-50%, 0) translateY(1vh)';
+    setTimeout(function() {
+      showPop(popUp[1]);
+    }, 100);
+
+    setTimeout(function() {
+      hidePop(popUp[1]);
+    }, 5000);
   }
-  else{
-    popUp[1].style.transform = 'translatey(-30vh)';
+  else{   
+    popUp[1].style.opacity = '0';
   }
 });
 
@@ -401,10 +406,16 @@ projGrid3.addEventListener('click', ()=>{
   //disableScroll();
   projView4.style.display = 'none';
   if( window.history.length == 1){
-    popUp[2].style.transform = 'translate(-50%, 0) translateY(1vh)';
+    setTimeout(function() {
+      showPop(popUp[2]);
+    }, 100);
+
+    setTimeout(function() {
+      hidePop(popUp[2]);
+    }, 5000);
   }
-  else{
-    popUp[2].style.transform = 'translatey(-30vh)';
+  else{   
+    popUp[2].style.opacity = '0';
   }
 });
 
@@ -417,10 +428,16 @@ projGrid4.addEventListener('click', ()=>{
   document.body.style.overflow = 'hidden';
 
   if( window.history.length == 1){
-    popUp[3].style.transform = 'translate(-50%, 0) translateY(1vh)';
+    setTimeout(function() {
+      showPop(popUp[3]);
+    }, 100);
+
+    setTimeout(function() {
+      hidePop(popUp[3]);
+    }, 5000);
   }
-  else{
-    popUp[3].style.transform = 'translatey(-30vh)';
+  else{   
+    popUp[3].style.opacity = '0';
   }
   //disableScroll();
 });

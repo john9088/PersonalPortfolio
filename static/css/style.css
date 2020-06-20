@@ -40,7 +40,7 @@ body {
     transform: translateY(0px);
     /* transition: 2s all ease-in-out; */
     align-items: center;
-    min-height: 8vh;
+    min-height: 6vh;
     z-index: 100;
 }
 
@@ -83,11 +83,57 @@ body {
 }
 
 .logo{
-    color: seashell;
+    display:inline-block;
+    position:relative;
+    color: #E9322E;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 1.5vw;
     margin-left: 50px;
+}
+
+.logo .bottom {
+    min-width: 20vw;
+    top: 5vh;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 1vh 2vw;
+    color: #444444;
+    background-color: #EEEEEE;
+    font-weight: normal;
+    font-size: 1vw;
+    border-radius: 1vw;
+    position: absolute;
+    z-index: 99999999;
+    box-sizing: border-box;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.5);
+    transition: .5s all ease-in-out;
+    opacity: 0;
+}
+
+.logo:hover .bottom {
+    opacity: 1;
+}
+
+.logo .bottom i {
+    position:absolute;
+    bottom:100%;
+    left:50%;
+    margin-left:-12px;
+    width:24px;
+    height:12px;
+    overflow:hidden;
+}
+
+.logo .bottom i::after {
+    content:'';
+    position:absolute;
+    width:12px;
+    height:12px;
+    left:50%;
+    transform:translate(-50%,50%) rotate(45deg);
+    background-color:#EEEEEE;
+    box-shadow:0 1px 8px rgba(0,0,0,0.5);
 }
 /* FOR NAV BAR END */
 
@@ -187,7 +233,7 @@ body {
  }
 
 #intro{
-	margin:0 auto;
+	margin: 25vh auto;
     position: static;
     padding: 0 25px 0 0;
     height: fit-content;
@@ -256,6 +302,7 @@ body {
     display: block;
     height: 5vh;
     width: 10vw;
+    border-radius: 1vw;
     font-size: 1vw;
     border: 2px solid #000;
     transition-duration: 0.4s;
@@ -284,7 +331,7 @@ body {
 
   .button2:hover {
     background-color: rgba(233, 50, 46,0.8);
-
+    color: white;
   }
 
 /* FOR PROJECT SECTION */
@@ -391,7 +438,9 @@ body {
     margin:0px 30px;
     height:100%;
     line-height: 5vh;
-    text-shadow:  0 0 5px #E9322E, 0 0 5px rgb(14, 14, 20);
+    /* text-shadow:  0 0 5px #E9322E, 0 0 5px rgb(14, 14, 20); */
+    font-weight: bold;
+    color:#E9322E;
     font-size: 2vw;
     position:relative;
     top: 40%;
@@ -530,15 +579,11 @@ body {
     grid-template-columns: auto auto;
 }
 .proj-tools-used span{
-    border: 2px solid #fff;
+    border: 1px solid #E9322E;
     border-radius: 10vw;
     margin: 0.5vh 2vw;
     text-align: center;
     padding: 5px;
-}
-
-.proj-tools-used span:hover{
-    background-color: rgba(68, 67, 67,0.8);
 }
 
 #video section div p{
@@ -660,7 +705,7 @@ body {
     position: relative;
     border: solid 2px  #c5c5c5;
     border-radius: 20px;
-    margin: 0 1vw;
+    margin: 6vh 1vw 0 1vw;
     width:70%;
     height: auto;
 }
@@ -1100,8 +1145,13 @@ input[type="submit"]{
     padding: 1vh 2vw;
     cursor: pointer;
     outline: none;
-    background: #E9322E;
+    background: rgba(149, 151, 148);
     color: #000;
     font-size: 1.5vw;
     border-radius: 1vw;
+    transition: 1s all;
+}
+input[type="submit"]:hover{
+    background-color: #E9322E;
+    color: #fff;
 }

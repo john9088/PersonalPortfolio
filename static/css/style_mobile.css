@@ -19,6 +19,18 @@
     .logo{
         margin-left: 0;
         font-size: 2.5vh;
+        background-color: rgb(149, 151, 148);
+        width: 55vw;
+        text-align: center;
+        margin-top: -3vh;
+        height: 3vh;
+        border-radius: 0 0 5vw 5vw;
+    }
+
+    .logo .bottom {
+        min-width: 40vw;
+        top: 4.5vh;
+        font-size: 1.5vh;
     }
     section#home {
         /* z-index: -1; */
@@ -144,7 +156,7 @@
     .button {
         color: #000;
         background-color: darkgrey;
-        /* padding: 1vh 2vw; */
+        border-radius: 2vh;
         text-align: center;
         text-decoration: none;
         display: block;
@@ -201,6 +213,8 @@
    
     .label-up {
         font-size: 3vh;
+        font-weight: lighter;
+        margin: 0px 4vw;
     }
 
     .button-container-project .button2 {
@@ -249,11 +263,6 @@
         margin-top: 2vh;
     } */
 
-    .label-up {
-        
-        margin: 0px 4vw;
-    }
-
     .cross{
         top: 73vh;  
         left: 62vw;
@@ -276,6 +285,7 @@
         background-color: rgba(233, 50, 46,0.8);
         display: block;
         z-index: 10;
+        width: fit-content;
         top: 5%;
         left: 50%;
         opacity: 0;
@@ -366,7 +376,8 @@
     }
 
     .skill-card{
-        width:100%;
+        width:90%;
+        margin: 0 auto;
         padding-top: 20px;
         /* background-color: #010820; */
     }
