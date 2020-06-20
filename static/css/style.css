@@ -8,7 +8,8 @@
 body {
     font-family:'DM Sans', sans-serif ;
     /* background-image: url(/static/photo/land_page_img.jpg) ; */
-    background-color: #19171A;
+    /* background-color: #19171A; */
+    background-color: black;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -34,6 +35,10 @@ body {
     position: fixed;
     width: 100%;    
     justify-content: space-around;
+    border-radius: 0 0 2vw 2vw;
+    background-color: rgba(149, 151, 148,0.8);
+    transform: translateY(0px);
+    /* transition: 2s all ease-in-out; */
     align-items: center;
     min-height: 8vh;
     z-index: 100;
@@ -189,9 +194,7 @@ body {
     display: flex;
     margin-bottom:50px;
     border-radius: 1.5vw;
-    box-shadow: 0 0 15px #E9322E, 0 0 5px #0000FF;
-    /* box-shadow: 20px 20px 40px; */
-    /* background: rgb(68, 67, 67); */
+    box-shadow: 0 0 15px #E9322E, 0 0 5px rgb(14, 14, 20);
     background: #959794;
     opacity: 1;
 	transition: 2s all ease-in-out;
@@ -200,8 +203,6 @@ body {
 .hero-content{
     position: relative;
     margin: 5vh 0 1vh 1vw;
-    /* top: 10vh; */
-    /* left: -9.5%; */
     text-align: left;
     font-family: 'DM Sans', sans-serif;
     color: #000;
@@ -249,7 +250,7 @@ body {
 .button {
     color: #000;
     background-color: darkgrey;
-    padding: 1vh 2vh;
+    /* padding: 1vh 2vh; */
     text-align: center;
     text-decoration: none;
     display: block;
@@ -269,20 +270,21 @@ body {
 
   .button2 {
     margin-left: 2vw;
-    
-    /* margin-top: 10px; */
-    /* margin-left: 0vw; */
-    
   }
 
   .button2 a{
     color: #000; 
     text-decoration: none;
+    padding: 1vh 3vw 1vh 2.5vw;
+  }
+
+  .button2 a:hover{
+    color: white;
   }
 
   .button2:hover {
     background-color: rgba(233, 50, 46,0.8);
-    color: white;
+
   }
 
 /* FOR PROJECT SECTION */
@@ -388,6 +390,8 @@ body {
     display:block;
     margin:0px 30px;
     height:100%;
+    line-height: 5vh;
+    text-shadow:  0 0 5px #E9322E, 0 0 5px rgb(14, 14, 20);
     font-size: 2vw;
     position:relative;
     top: 40%;
@@ -801,7 +805,7 @@ body {
 .timeline ul li:nth-child(odd) .time{
 	position: absolute;
 	top: 3.5vh;
-	right: -22vw;
+	right: -18vw;
 	margin: 0;
 	padding: 8px 16px;
 	background: #E9322E;
@@ -813,7 +817,7 @@ body {
 .timeline ul li:nth-child(even) .time{
 	position: absolute;
 	top: 3.5vh;
-	left: -18vw;
+	left: -22vw;
 	margin: 0;
 	padding: 8px 16px;
 	background: #E9322E;
@@ -1092,12 +1096,12 @@ body {
   }
 
 input[type="submit"]{
-	border: none;
-	padding: 7px 35px;
-	cursor: pointer;
-	outline: none;
-	background: #E9322E;
-	color: #000;
-	font-size: 1.5vw;
-	border-radius: 2px; 
+    border: none;
+    padding: 1vh 2vw;
+    cursor: pointer;
+    outline: none;
+    background: #E9322E;
+    color: #000;
+    font-size: 1.5vw;
+    border-radius: 1vw;
 }

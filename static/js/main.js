@@ -6,7 +6,8 @@ const proj1 = document.querySelector('.proj1');
 const proj2 = document.querySelector('.proj2');
 const proj3 = document.querySelector('.proj3');
 
-var bodyTag = document.getElementsByTagName("BODY")[0]
+var bodyTag = document.getElementsByTagName("BODY")[0];
+var navbar = document.getElementById('mynavbar');
 
 const slider = document.querySelector('.slider');
 const initialHeight = screen.height;
@@ -29,23 +30,12 @@ var projGrid3 = document.getElementById('viewProj3');
 var projGrid4 = document.getElementById('viewProj4');
 var popUp = document.querySelectorAll('.pop-up');
 
-// var promise = document.querySelector('video-proj1').play();
 
-//TO HIDE INTRO
 window.addEventListener('scroll', ()=>{
   var introText = document.getElementById('intro');
   var introPosition = introText.getBoundingClientRect().top;
   var screenPosition = window.innerHeight/2;
 
-  if(introPosition < 0){
-    introText.style.opacity = "0";
-  }
-  else{
-    introText.style.opacity = "1";
-  }
-},true);
-
-window.addEventListener('scroll', ()=>{
   var projTitle = document.querySelector('.project-head');
   var proj1 = document.querySelector('.proj1');
   var proj2 = document.querySelector('.proj2');
@@ -78,6 +68,16 @@ window.addEventListener('scroll', ()=>{
   var contactcontent = document.querySelector('.contactme-container');
   var contactTitle = document.querySelector('.contact-head');
   var contactPosition = contactcontent.getBoundingClientRect().top;
+
+  //navbar.style.transform = 'translateY(-10vh)';
+
+  //TO HIDE INTRO
+  if(introPosition < 0){
+    introText.style.opacity = "0";
+  }
+  else{
+    introText.style.opacity = "1";
+  }
 
   if(window.innerHeight < window.innerWidth){
     //For Project Section
@@ -188,10 +188,6 @@ window.addEventListener('scroll', ()=>{
       if(contactPosition > window.innerHeight){
         contactTitle.style.transform = "translateX(-100vw)";
       }
-
-
-
-
   }
   else{
     //For Skill
@@ -238,7 +234,6 @@ window.addEventListener('scroll', ()=>{
       skillOther.style.transform = "translateY(100vh)";
       skillOther.style.opacity = "0";
     }
-
 
     //For Project
     var screenSlideProj = window.innerHeight/1.3;
@@ -321,6 +316,8 @@ window.addEventListener('scroll', ()=>{
   }
 },true);
 
+//navbar.style.transform = 'translateY(0)';
+
 window.addEventListener('click', function(e){
   if(this.document.getElementById('send-email').contains(e.target)){
     var firstName = document.getElementById('first-name').value,
@@ -337,16 +334,21 @@ window.addEventListener('click', function(e){
     window.open('mailto:kevdev9088@gmail.com?subject='+subject +'&body='+ bodyData);
 
   }
-  
+   var x = document.querySelectorAll('.nav-links li a');
   if (document.querySelector('.burger').contains(e.target)){
 		nav.classList.toggle('nav-active');
 	}
-	else if(document.querySelector('.nav-links').contains(e.target)){
-	}
+	else if(container.contains(e.target)){ 
+    nav.classList.remove('nav-active');
+  }
 	else{
-		nav.classList.remove('nav-active');
+		for(var i =0 ;i < x.length ; i++){
+      if(x[i].contains(e.target))
+        nav.classList.remove('nav-active');
+    }
 	}
 });
+
 
 
 projGrid1.addEventListener('click', ()=>{
