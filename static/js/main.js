@@ -360,7 +360,7 @@ projGrid1.addEventListener('click', ()=>{
 	projView3.style.display = 'none';
   projView4.style.display = 'none';
 
-  if( window.history.length == 1){
+  if( window.history.length == 1 || !window.location.href.includes('#')){
     setTimeout(function() {
       showPop(popUp[0]);
     }, 100);
@@ -379,11 +379,10 @@ projGrid2.addEventListener('click', ()=>{
 	projView2.style.display = 'block';
 	projView2.style.opacity= '1';
   document.body.style.overflow = 'hidden';
-  //disableScroll();
 	projView3.style.display = 'none';
   projView4.style.display = 'none';
 
-  if( window.history.length == 1){
+  if( window.history.length == 1 || !window.location.href.includes('#')){
     setTimeout(function() {
       showPop(popUp[1]);
     }, 100);
@@ -405,7 +404,7 @@ projGrid3.addEventListener('click', ()=>{
   document.body.style.overflow = 'hidden';
   //disableScroll();
   projView4.style.display = 'none';
-  if( window.history.length == 1){
+  if( window.history.length == 1 || !window.location.href.includes('#')){
     setTimeout(function() {
       showPop(popUp[2]);
     }, 100);
@@ -427,7 +426,7 @@ projGrid4.addEventListener('click', ()=>{
 	projView4.style.opacity= '1';
   document.body.style.overflow = 'hidden';
 
-  if( window.history.length == 1){
+  if( window.history.length == 1 || !window.location.href.includes('#')){
     setTimeout(function() {
       showPop(popUp[3]);
     }, 100);

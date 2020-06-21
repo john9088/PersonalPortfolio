@@ -28,9 +28,10 @@
     }
 
     .logo .bottom {
-        min-width: 40vw;
+        min-width: 90%;
+        padding: 1vh 1vw;
         top: 4.5vh;
-        font-size: 1.5vh;
+        font-size: 60%;
     }
     section#home {
         /* z-index: -1; */
@@ -49,7 +50,7 @@
         flex-direction: column;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
-        background: rgba(0, 0, 0, 0.7);
+        background: rgb(0, 0, 0);
     }
 
     .nav-links li{
@@ -397,7 +398,7 @@
     }
 
     .skill-card ul li p {
-        margin-left: 11vw;
+        margin-left: 13vw;
         top: -6vh;
     }
 
