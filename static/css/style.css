@@ -5,6 +5,8 @@
     /* scroll-behavior: smooth;*/
 } 
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
 body {
     font-family:'DM Sans', sans-serif ;
     /* background-image: url(/static/photo/land_page_img.jpg) ; */
@@ -250,7 +252,7 @@ body {
     position: relative;
     margin: 5vh 0 1vh 1vw;
     text-align: left;
-    font-family: 'DM Sans', sans-serif;
+    /* font-family: 'DM Sans', sans-serif; */
     color: #000;
 }
 
@@ -366,7 +368,7 @@ body {
 
 .project-head {
     position: relative;
-    margin: 30vh 5.5vw;
+    margin: 30vh 4.5vw;
     color: #959794;
     transform: translateX(-100vw);
     transition: 1.5s all ease-in-out;
@@ -412,7 +414,7 @@ body {
     width:100%;
     height:100%;
     text-align:center;
-    font-family:sans-serif;
+    /* font-family:sans-serif; */
 }
 
 .proj-btn {
@@ -603,7 +605,6 @@ body {
     min-height: 100vh;
     margin: 0 auto;
     height: auto;
-    /* background: linear-gradient(90deg,  #7A7A7A 0%,#7A7A7A 30%,#8F8F8F 30%,#8F8F8F 100%); */
     overflow-x: hidden;
     overflow-y: visible;
 }
@@ -644,9 +645,6 @@ body {
     height: 85%;
     margin: 7.5vh auto;
     color: #c5c5c5;
-    /* border-radius: 20px; */
-    /* background-color: rgba(255,255,255,0.8); */
-    /* box-shadow: 10px 10px 10px; */
 }
 
 .aboutme-card .aboutme-text{
@@ -656,8 +654,12 @@ body {
     height: inherit;
     top: 10px;
     left: 20px;
-    
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.5vw;
+}
+
+.aboutme-card .aboutme-text p{
+    margin-top: 2%;
 }
 
 /* SECTION Career START */
@@ -694,7 +696,7 @@ body {
 
 .career-head{
     position: relative;
-    margin: 30vh 5.5vw;
+    margin: 30vh 4.5vw;
     transform: translateX(-100vw);
     transition: 1s all ease-in-out;
     color: #959794;
@@ -709,9 +711,6 @@ body {
     width:70%;
     height: auto;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
-
 
 .timeline{
 	position: relative;
@@ -778,7 +777,8 @@ body {
 }
 .timeline ul li{
 	list-style: none;
-	position: relative;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
 	width: 50%;
 	padding: 3.5vh 2vw;
 }
@@ -829,15 +829,16 @@ body {
 
 .timeline ul li h3{
     font-size: 1.60vw;
-	font-weight: 600;
-	color: #E9322E;
+    font-weight: 500;
+    text-align: left;
+    color: #E9322E;
 }
 
 .timeline ul li p{
 	color: #c5c5c5;
     margin: 10px 0 0;
     padding: 0;
-    line-height: 4vh;
+    line-height: 3.5vh;
     font-size: 1.5vw;
 }
 
@@ -934,12 +935,12 @@ body {
 
 .skill-card  section > div{
     position: relative;
-    background-color: aliceblue;
+    background-color: #fff;
     width: 70%;
     height: auto;
     margin: 1% 20%;
     border-radius: 20px;
-    box-shadow: 10px 10px 20px; 
+    box-shadow: 10px 5px 5px; 
 }
 
 .skill-card  section > div > ul{

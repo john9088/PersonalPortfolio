@@ -85,7 +85,7 @@ window.addEventListener('scroll', ()=>{
     if(proj1Position < screenSlideProj){
       proj1.style.transform = "translateX(0)";
       proj2.style.transform = "translateX(0)";
-      projTitle.style.transform = "translateX(0)";
+      projTitle.style.transform = "translateX(1vw)";
     }
     if(proj1Position < (-proj1.offsetHeight/2)){
       proj1.style.transform = "translateX(100vw)";
@@ -117,7 +117,7 @@ window.addEventListener('scroll', ()=>{
       skillLanguage.style.opacity = "1";
       skillWebTech.style.transform = "translateY(0)";
       skillWebTech.style.opacity = "1";
-      skillTitle.style.transform = "translateX(0)";
+      skillTitle.style.transform = "translateX(1vw)";
     }
     if(skillLanguagePosition < (-skillLanguageContainer.offsetHeight/2)){
       skillLanguage.style.transform = "translateY(-100vh)";
@@ -154,7 +154,7 @@ window.addEventListener('scroll', ()=>{
     //For About Section
     var screenSlideaboutme = window.innerHeight/1.3;
     if(aboutmePosition < screenSlideaboutme){
-      aboutmeTitle.style.transform = "translateX(0)";
+      aboutmeTitle.style.transform = "translateX(1vw)";
     }
     if(aboutmePosition < -(aboutmecontent.offsetHeight)){
       aboutmeTitle.style.transform = "translateX(-100vw)";
@@ -167,7 +167,7 @@ window.addEventListener('scroll', ()=>{
     //For Career Section
     var screenSlidecareer = window.innerHeight/1.5;
      if(careerPosition < screenSlidecareer){
-       careerTitle.style.transform = "translateX(0)";
+       careerTitle.style.transform = "translateX(1vw)";
      }
      if(careerPosition < -(careercontent.offsetHeight)){
        careerTitle.style.transform = "translateX(-100vw)";
@@ -179,7 +179,7 @@ window.addEventListener('scroll', ()=>{
     //For Contact me Section
     var screenSlidecontact = window.innerHeight/1.42;
      if(contactPosition < screenSlidecontact){
-      contactTitle.style.transform = "translateX(0)";
+      contactTitle.style.transform = "translateX(1vw)";
 
      }
      if(contactPosition < -(contactcontent.offsetHeight)){

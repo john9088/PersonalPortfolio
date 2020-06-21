@@ -28,7 +28,7 @@
     }
 
     .logo .bottom {
-        min-width: 90%;
+        min-width: 100%;
         padding: 1vh 1vw;
         top: 4.5vh;
         font-size: 60%;
@@ -187,6 +187,7 @@
         grid-template-columns: auto;
         padding: 0;
         grid-gap: 3.5vw;
+        overflow-y: hidden;
     }
 
     .project-container {
@@ -377,15 +378,14 @@
     }
 
     .skill-card{
-        width:90%;
+        width: 95%;
         margin: 0 auto;
         padding-top: 20px;
-        /* background-color: #010820; */
     }
 
     .skill-card section > div {
-        width: 95%;
-        margin: 5% 2%;
+        width: 98%;
+        margin: 5% 0% 0% 5%;
     }
 
     .skill-card ul li {
@@ -398,7 +398,7 @@
     }
 
     .skill-card ul li p {
-        margin-left: 13vw;
+        margin: 0 2% 0 27%;
         top: -6vh;
     }
 
