@@ -23,11 +23,18 @@ body {
     justify-content: center;
     align-content: center;
 }
+
+.fixed-html{
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
 .container {
     width: 100%;
     min-height: 100vh;
     height: auto;
     overflow-y: auto;  
+    transition: transform 0.5s ease-in;
 }
 
 
@@ -38,7 +45,7 @@ body {
     width: 100%;    
     justify-content: space-around;
     border-radius: 0 0 2vw 2vw;
-    background-color: rgba(149, 151, 148,0.8);
+    background-color: rgba(204, 204, 204,0.9);
     transform: translateY(0px);
     /* transition: 2s all ease-in-out; */
     align-items: center;
@@ -66,7 +73,7 @@ body {
     letter-spacing: 3px;
     font-weight: bold;
     font-size: 1vw;
-    color: seashell;
+    color: #000;
 }
 
 .nav-links li a:hover{
@@ -242,8 +249,8 @@ body {
     display: flex;
     margin-bottom:50px;
     border-radius: 1.5vw;
-    box-shadow: 0 0 15px #E9322E, 0 0 5px rgb(14, 14, 20);
-    background: #959794;
+    box-shadow: 0 0 8px #E9322E, 0 0 5px rgb(14, 14, 20);
+    background: #CCCCCC;
     opacity: 1;
 	transition: 2s all ease-in-out;
 }
@@ -369,7 +376,7 @@ body {
 .project-head {
     position: relative;
     margin: 30vh 4.5vw;
-    color: #959794;
+    color: #CCC;
     transform: translateX(-100vw);
     transition: 1.5s all ease-in-out;
     font-size: 4vw;
@@ -629,7 +636,7 @@ body {
     margin: 30vh 5.5vw;
     transform: translateX(-100vw);
     transition: 1s all ease-in-out;
-    color: #959794;
+    color: #CCC;
     font-size: 4vw;
 }
 
@@ -699,7 +706,7 @@ body {
     margin: 30vh 4.5vw;
     transform: translateX(-100vw);
     transition: 1s all ease-in-out;
-    color: #959794;
+    color: #CCC;
     font-size: 4vw;
 }
 
@@ -909,7 +916,7 @@ body {
 .skill-head {
     position: relative;
     margin: 30vh 5.5vw;
-    color: #959794;
+    color: #CCC;
     font-size: 4vw;
     transform: translateX(-100vw);
     transition: 1.5s all ease-in-out;
@@ -940,7 +947,7 @@ body {
     height: auto;
     margin: 1% 20%;
     border-radius: 20px;
-    box-shadow: 10px 5px 5px; 
+    /* box-shadow: 10px 5px 5px;  */
 }
 
 .skill-card  section > div > ul{
@@ -1005,7 +1012,7 @@ body {
     margin: 30vh 5.5vw;
     transform: translateX(-100vw);
     transition: 1s all ease-in-out;
-    color:#959794;
+    color:#CCC;
     font-size: 4vw;
 }
 

@@ -7,6 +7,8 @@ const proj2 = document.querySelector('.proj2');
 const proj3 = document.querySelector('.proj3');
 
 var bodyTag = document.getElementsByTagName("BODY")[0];
+var htmlTag = document.getElementsByTagName("HTML")[0];
+console.log(htmlTag);
 var navbar = document.getElementById('mynavbar');
 
 const slider = document.querySelector('.slider');
@@ -334,17 +336,24 @@ window.addEventListener('click', function(e){
     window.open('mailto:kevdev9088@gmail.com?subject='+subject +'&body='+ bodyData);
 
   }
-   var x = document.querySelectorAll('.nav-links li a');
+  var x = document.querySelectorAll('.nav-links li a');
   if (document.querySelector('.burger').contains(e.target)){
-		nav.classList.toggle('nav-active');
+    nav.classList.toggle('nav-active');
+    container.classList.toggle('container-slide');
+    document.body.style.overflow = 'hidden';
 	}
 	else if(container.contains(e.target)){ 
     nav.classList.remove('nav-active');
+    container.classList.remove('container-slide');
+    document.body.style.overflow = '';
   }
 	else{
 		for(var i =0 ;i < x.length ; i++){
-      if(x[i].contains(e.target))
+      if(x[i].contains(e.target)){
         nav.classList.remove('nav-active');
+        container.classList.remove('container-slide');
+        document.body.style.overflow = '';
+      }
     }
 	}
 });

@@ -4,7 +4,7 @@
     }
 }
 
-@media screen and (orientation: portrait) /* , (max-width:550px)*/{ 
+@media screen and (orientation: portrait),(max-width: 650px) /* , (max-width:550px)*/{ 
     body{
         overflow-x: hidden;
         /* background: #1b1b1e; */
@@ -19,7 +19,7 @@
     .logo{
         margin-left: 0;
         font-size: 2.5vh;
-        background-color: rgb(149, 151, 148);
+        background-color: rgb(204, 204, 204);
         width: 55vw;
         text-align: center;
         margin-top: -3vh;
@@ -43,14 +43,15 @@
         position: absolute;
         right: 0px;
         top:0;
-        height: 100vh;
+        /* height: 100%; */
         height: -webkit-fill-available;
+        border-radius: 7vw 0 0 7vw;
         width: 38%;
         display: flex;
         flex-direction: column;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
-        background: rgb(0, 0, 0);
+        background: rgb(204, 204, 204);
     }
 
     .nav-links li{
@@ -340,7 +341,7 @@
     }
 
     .aboutme-card .aboutme-info {
-        
+        word-spacing: 0.5vw;
         margin: 2.5vh auto;
     }
 
@@ -589,6 +590,10 @@
 
 .nav-active{
     transform: translateX(0%);
+}
+
+.container-slide{
+    transform: translateX(-38%);
 }
 
 @keyframes navLinkFade{
