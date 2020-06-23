@@ -361,13 +361,14 @@ window.addEventListener('click', function(e){
 
 
 projGrid1.addEventListener('click', ()=>{
-	projView1.style.display = 'block';
+  projView1.style.visibility = 'inherit';
+	// projView1.style.display = 'block';
 	projView1.style.opacity = '1';
   document.body.style.overflow = 'hidden';
   //disableScroll();
-	projView2.style.display = 'none';
-	projView3.style.display = 'none';
-  projView4.style.display = 'none';
+	projView2.style.visibility = 'hidden';
+	projView3.style.visibility = 'hidden';
+  projView4.style.visibility = 'hidden';
 
   if( window.history.length == 1 || !window.location.href.includes('#')){
     setTimeout(function() {
@@ -385,11 +386,12 @@ projGrid1.addEventListener('click', ()=>{
 
 projGrid2.addEventListener('click', ()=>{
 	projView1.style.display = 'none';
-	projView2.style.display = 'block';
+  // projView2.style.display = 'block';
+  projView2.style.visibility = 'inherit';
 	projView2.style.opacity= '1';
   document.body.style.overflow = 'hidden';
-	projView3.style.display = 'none';
-  projView4.style.display = 'none';
+	projView3.style.visibility = 'hidden';
+  projView4.style.visibility = 'hidden';
 
   if( window.history.length == 1 || !window.location.href.includes('#')){
     setTimeout(function() {
@@ -406,13 +408,13 @@ projGrid2.addEventListener('click', ()=>{
 });
 
 projGrid3.addEventListener('click', ()=>{
-	projView1.style.display = 'none';
-	projView2.style.display = 'none';
-	projView3.style.display = 'block';
+	projView1.style.visibility = 'hidden';
+	projView2.style.visibility = 'hidden';
+  //projView3.style.display = 'block';
+  projView3.style.visibility = 'inherit';
 	projView3.style.opacity= '1';
   document.body.style.overflow = 'hidden';
-  //disableScroll();
-  projView4.style.display = 'none';
+  projView4.style.visibility = 'hidden';
   if( window.history.length == 1 || !window.location.href.includes('#')){
     setTimeout(function() {
       showPop(popUp[2]);
@@ -428,10 +430,11 @@ projGrid3.addEventListener('click', ()=>{
 });
 
 projGrid4.addEventListener('click', ()=>{
-	projView1.style.display = 'none';
-	projView2.style.display = 'none';
-	projView3.style.display = 'none';
-	projView4.style.display = 'block';
+	projView1.style.visibility = 'hidden';
+	projView2.style.visibility = 'hidden';
+	projView3.style.visibility = 'hidden';
+  // projView4.style.display = 'block';
+  projView4.style.visibility = 'inherit';
 	projView4.style.opacity= '1';
   document.body.style.overflow = 'hidden';
 
@@ -453,18 +456,18 @@ projGrid4.addEventListener('click', ()=>{
 
 window.addEventListener('click', function(e){
 	//console.log(e.target.className);
-	if( projView1.style.display == 'block' || projView2.style.display == 'block' ||
-		projView3.style.display == 'block' || projView4.style.display == 'block'){
+	if( projView1.style.visibility == 'inherit' || projView2.style.visibility == 'inherit' ||
+		projView3.style.visibility == 'inherit' || projView4.style.visibility == 'inherit'){
 
 		for (i = 0; i < sectionVideo.length; i++) {
 			if( sectionVideo[i] == e.target  || e.target.className == 'cross'||
 			   e.target.className == 'go-back-p'|| e.target.className == 'go-back-img'){
         //enableScroll();
         document.body.style.overflow = '';
-				projView1.style.display = 'none';
-			 	projView2.style.display = 'none';
-			 	projView3.style.display = 'none';
-			 	projView4.style.display = 'none';
+				projView1.style.visibility = 'hidden';
+			 	projView2.style.visibility = 'hidden';
+			 	projView3.style.visibility = 'hidden';
+			 	projView4.style.visibility = 'hidden';
 			 	projView1.style.opacity= '0';
 			 	projView2.style.opacity= '0';
 			 	projView3.style.opacity= '0';
