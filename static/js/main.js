@@ -321,6 +321,7 @@ window.addEventListener('scroll', ()=>{
 //navbar.style.transform = 'translateY(0)';
 
 window.addEventListener('click', function(e){
+  this.console.log(e.target);
   if(this.document.getElementById('send-email').contains(e.target)){
     var firstName = document.getElementById('first-name').value,
         lastName  = this.document.getElementById('last-name').value,
@@ -342,7 +343,8 @@ window.addEventListener('click', function(e){
     container.classList.toggle('container-slide');
     document.body.style.overflow = 'hidden';
 	}
-	else if(container.contains(e.target)){ 
+	else if(container.contains(e.target) && !( projView1.style.visibility == 'inherit' || projView2.style.visibility == 'inherit' ||
+                                            projView3.style.visibility == 'inherit' || projView4.style.visibility == 'inherit')){ 
     nav.classList.remove('nav-active');
     container.classList.remove('container-slide');
     document.body.style.overflow = '';
