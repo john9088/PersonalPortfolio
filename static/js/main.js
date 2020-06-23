@@ -8,7 +8,6 @@ const proj3 = document.querySelector('.proj3');
 
 var bodyTag = document.getElementsByTagName("BODY")[0];
 var htmlTag = document.getElementsByTagName("HTML")[0];
-console.log(htmlTag);
 var navbar = document.getElementById('mynavbar');
 
 const slider = document.querySelector('.slider');
@@ -320,8 +319,7 @@ window.addEventListener('scroll', ()=>{
 
 //navbar.style.transform = 'translateY(0)';
 
-window.addEventListener('click', function(e){
-  this.console.log(e.target);
+window.addEventListener('click', function(e){ 
   if(this.document.getElementById('send-email').contains(e.target)){
     var firstName = document.getElementById('first-name').value,
         lastName  = this.document.getElementById('last-name').value,
