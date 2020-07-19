@@ -332,7 +332,7 @@ window.addEventListener('click', function(e){
 
     var bodyData = message+'%0D%0A%0D%0A'+firstName+' '+lastName+'%0D%0APh No:'+mobileNumber;
     
-    window.open('mailto:kevdev9088@gmail.com?subject='+subject +'&body='+ bodyData);
+    window.open('mailto:jasonbritto8085@gmail.com?subject='+subject +'&body='+ bodyData);
 
   }
   var x = document.querySelectorAll('.nav-links li a');
